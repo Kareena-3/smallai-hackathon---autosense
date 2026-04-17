@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoSense AI – Predictive Maintenance Platform</title>
+  <style>
+    :root {
+      --bg: #0f162b;
+      --card: #111827;
+      --card2: #1a2235;
+      --border: #1f2d45;
+      --accent: #3b82f6;
+      --green: #22c55e;
+      --yellow: #eab308;
+      --red: #ef4444;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --purple: #8b5cf6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 14px;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 24px;
+      height: 56px;
+      background: #080c18;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin-right: 20px;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--accent), var(--purple));
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-size: 16px;
+    }
+
+    .nav-tab {
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 13px;
+      transition: .15s;
+    }
+
+    .nav-tab:hover,
+    .nav-tab.active {
+      background: var(--card2);
+      color: #fff;
+    }
+
+    .nav-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .badge-live {
+      background: #ef444422;
+      color: var(--red);
+      border: 1px solid #ef444444;
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .btn {
+      padding: 7px 16px;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .15s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #2563eb;
+    }
+
+    .btn-sim {
+      background: linear-gradient(135deg, #7c3aed, #3b82f6);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 13px;
+      animation: pulse-btn 2s infinite;
+    }
+
+    @keyframes pulse-btn {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 #3b82f640;
+      }
+
+      50% {
+        box-shadow: 0 0 0 8px #3b82f600;
+      }
+    }
+
+    /* LAYOUT */
+    .main {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .panel-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* STAT CARDS */
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .stat-val {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .stat-delta {
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    .delta-up {
+      color: var(--green);
+    }
+
+    .delta-down {
+      color: var(--red);
+    }
+
+    /* STATUS BADGES */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
+
+    .badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .badge-green {
+      background: #22c55e18;
+      color: var(--green);
+      border: 1px solid #22c55e33;
+    }
+
+    .badge-green::before {
+      background: var(--green);
+    }
+
+    .badge-yellow {
+      background: #eab30818;
+      color: var(--yellow);
+      border: 1px solid #eab30833;
+    }
+
+    .badge-yellow::before {
+      background: var(--yellow);
+    }
+
+    .badge-red {
+      background: #ef444418;
+      color: var(--red);
+      border: 1px solid #ef444433;
+    }
+
+    .badge-red::before {
+      background: var(--red);
+    }
+
+    /* VEHICLE TABLE */
+    .veh-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .veh-table th {
+      text-align: left;
+      padding: 8px 12px;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .veh-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #1a2235;
+      vertical-align: middle;
+    }
+
+    .veh-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .veh-table tr:hover td {
+      background: #1a2235;
+      cursor: pointer;
+    }
+
+    .health-bar-wrap {
+      width: 80px;
+      background: #1f2d45;
+      border-radius: 4px;
+      height: 6px;
+    }
+
+    .health-bar {
+      height: 6px;
+      border-radius: 4px;
+      transition: width .3s;
+    }
+
+    /* DETAIL PANEL */
+    .sensor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .sensor-card {
+      background: var(--card2);
+      border-radius: 10px;
+      padding: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .sensor-label {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .sensor-val {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .sensor-unit {
+      font-size: 11px;
+      color: var(--muted);
+      margin-left: 3px;
+    }
+
+    .sensor-status {
+      font-size: 10px;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .prob-bar-wrap {
+      background: #1f2d45;
+      border-radius: 6px;
+      height: 10px;
+      overflow: hidden;
+      margin: 8px 0;
+    }
+
+    .prob-bar {
+      height: 10px;
+      border-radius: 6px;
+      transition: width 1s;
+    }
+
+    /* AGENT LOG */
+    .agent-log {
+      background: #06090f;
+      border-radius: 10px;
+      padding: 14px;
+      height: 220px;
+      overflow-y: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .log-line {
+      padding: 2px 0;
+      animation: fadein .3s;
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .log-ts {
+      color: var(--muted);
+      margin-right: 8px;
+    }
+
+    .log-ok {
+      color: var(--green);
+    }
+
+    .log-warn {
+      color: var(--yellow);
+    }
+
+    .log-err {
+      color: var(--red);
+    }
+
+    .log-info {
+      color: var(--accent);
+    }
+
+    /* APPOINTMENTS */
+    .apt-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .apt-item:last-child {
+      border-bottom: none;
+    }
+
+    .apt-time {
+      background: var(--card2);
+      border-radius: 6px;
+      padding: 6px 10px;
+      text-align: center;
+      min-width: 56px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .apt-info {
+      flex: 1;
+    }
+
+    .apt-vehicle {
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .apt-issue {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* HEATMAP */
+    .heatmap {
+      display: flex;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .hm-cell {
+      flex: 1;
+      border-radius: 4px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* DEFECT PATTERNS */
+    .defect-item {
+      background: var(--card2);
+      border-radius: 10px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      margin-bottom: 10px;
+    }
+
+    .defect-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+
+    .defect-title {
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .capa-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .capa-review {
+      background: #eab30820;
+      color: var(--yellow);
+    }
+
+    .capa-deploy {
+      background: #22c55e20;
+      color: var(--green);
+    }
+
+    .capa-monitor {
+      background: #3b82f620;
+      color: var(--accent);
+    }
+
+    .defect-meta {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .defect-bar-wrap {
+      margin-top: 8px;
+      background: #1f2d45;
+      border-radius: 4px;
+      height: 6px;
+    }
+
+    .defect-bar {
+      height: 6px;
+      border-radius: 4px;
+      background: var(--red);
+    }
+
+    /* UTIL BAR */
+    .util-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+      font-size: 12px;
+    }
+
+    .util-bar-wrap {
+      background: #1f2d45;
+      border-radius: 6px;
+      height: 12px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .util-bar {
+      height: 12px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, var(--accent), var(--purple));
+    }
+
+    /* SIM STEPS */
+    .sim-step {
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      opacity: .35;
+      transition: .4s;
+    }
+
+    .sim-step.done {
+      opacity: 1;
+    }
+
+    .sim-step.active {
+      opacity: 1;
+    }
+
+    .step-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      background: var(--card2);
+      border: 2px solid var(--border);
+    }
+
+    .step-icon.active {
+      border-color: var(--accent);
+      background: #3b82f620;
+      animation: pulse-icon .8s infinite;
+    }
+
+    .step-icon.done {
+      border-color: var(--green);
+      background: #22c55e20;
+    }
+
+    @keyframes pulse-icon {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 #3b82f640;
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px #3b82f600;
+      }
+    }
+
+    .step-body {
+      flex: 1;
+    }
+
+    .step-title {
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .step-desc {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .step-ts {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+
+    /* TABS under panels */
+    .tab-row {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 14px;
+    }
+
+    .tab-btn {
+      padding: 5px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 12px;
+      transition: .15s;
+    }
+
+    .tab-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .text-red {
+      color: var(--red);
+    }
+
+    .text-yellow {
+      color: var(--yellow);
+    }
+
+    .text-green {
+      color: var(--green);
+    }
+
+    .text-accent {
+      color: var(--accent);
+    }
+
+    .text-muted {
+      color: var(--muted);
+    }
+
+    .fw700 {
+      font-weight: 700;
+    }
+
+    .mt8 {
+      margin-top: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--card2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 7px;
+      font-size: 10px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+      <div class="logo-icon">⚡</div>AutoSense AI
+    </div>
+    <span class="nav-tab active" onclick="showTab('dashboard',this)">Dashboard</span>
+    <span class="nav-tab" onclick="showTab('scheduling',this)">Scheduling Agent</span>
+    <span class="nav-tab" onclick="showTab('servicecenter',this)">Service Center</span>
+    <span class="nav-tab" onclick="showTab('manufacturing',this)">Manufacturing</span>
+    <div class="nav-right">
+      <span class="badge-live badge">● LIVE</span>
+      <button class="btn-sim" onclick="runSimulation()">▶ Run AI Simulation</button>
+    </div>
+  </nav>
+
+  <!-- ======================== DASHBOARD TAB ======================== -->
+  <div id="tab-dashboard" class="main">
+    <!-- STAT CARDS -->
+    <div class="grid-4">
+      <div class="stat-card">
+        <div class="stat-label">Total Fleet Vehicles</div>
+        <div class="stat-val">10</div>
+        <div class="stat-delta delta-up">↑ Synced from Prisma DB</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Critical Alerts</div>
+        <div class="stat-val text-red" id="stat-critical">3</div>
+        <div class="stat-delta delta-down">Requires immediate action</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Appointments Today</div>
+        <div class="stat-val text-accent" id="stat-apts">5</div>
+        <div class="stat-delta delta-up">↑ 3 auto-scheduled by AI</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Service Center Utilization</div>
+        <div class="stat-val text-green" id="stat-util">72%</div>
+        <div class="stat-delta delta-up">↑ from 40% baseline</div>
+      </div>
+    </div>
+
+    <!-- FLEET TABLE + DETAIL -->
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-title">🚗 Fleet Overview</div>
+        <table class="veh-table" id="fleet-table">
+          <thead>
+            <tr>
+              <th>Vehicle</th>
+              <th>Model</th>
+              <th>KM</th>
+              <th>Health</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="fleet-tbody"></tbody>
+        </table>
+      </div>
+      <div class="panel" id="detail-panel">
+        <div class="panel-title" id="detail-title">📊 Select a vehicle to diagnose</div>
+        <div id="detail-content" class="text-muted" style="font-size:13px;margin-top:40px;text-align:center;">
+          ← Click any vehicle row to see predictive diagnostics
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== SCHEDULING TAB ======================== -->
+  <div id="tab-scheduling" class="main hidden">
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-title">🤖 AI Agent Activity Log</div>
+        <div class="agent-log" id="agent-log-box">
+          <div class="log-line"><span class="log-ts">23:31:00</span><span class="log-info">[MASTER] System initialized.
+              Monitoring 12 vehicles.</span></div>
+          <div class="log-line"><span class="log-ts">23:31:02</span><span class="log-ok">[DATA] Telematics stream
+              connected. Sampling at 1Hz.</span></div>
+          <div class="log-line"><span class="log-ts">23:31:05</span><span class="log-warn">[DIAG] VEH_DEL_00003 – Brake
+              wear anomaly detected (87%)</span></div>
+          <div class="log-line"><span class="log-ts">23:31:06</span><span class="log-err">[ALERT] VEH_DEL_00003
+              escalated to RED status.</span></div>
+          <div class="log-line"><span class="log-ts">23:31:08</span><span class="log-info">[ENGAGE] Initiating voice
+              call to Owner_3 (+91-11-54821903)</span></div>
+          <div class="log-line"><span class="log-ts">23:31:12</span><span class="log-ok">[ENGAGE] Customer accepted
+              appointment offer.</span></div>
+          <div class="log-line"><span class="log-ts">23:31:13</span><span class="log-info">[SCHED] Checking available
+              slots across 3 service centers…</span></div>
+          <div class="log-line"><span class="log-ts">23:31:14</span><span class="log-ok">[SCHED] Slot confirmed:
+              Center_Delhi_1 @ 2026-04-15 10:00</span></div>
+          <div class="log-line"><span class="log-ts">23:31:15</span><span class="log-ok">[SMS] Confirmation SMS sent to
+              Owner_3.</span></div>
+          <div class="log-line"><span class="log-ts">23:31:17</span><span class="log-warn">[DIAG] VEH_DEL_00007 –
+              Battery voltage low (11.8V)</span></div>
+          <div class="log-line"><span class="log-ts">23:31:19</span><span class="log-info">[ENGAGE] Initiating voice
+              call to Owner_7 (+91-11-67234510)</span></div>
+          <div class="log-line"><span class="log-ts">23:31:22</span><span class="log-ok">[ENGAGE] Customer
+              accepted.</span></div>
+          <div class="log-line"><span class="log-ts">23:31:23</span><span class="log-ok">[SCHED] Slot confirmed:
+              Center_Gurgaon @ 2026-04-16 09:30</span></div>
+          <div class="log-line"><span class="log-ts">23:31:30</span><span class="log-ok">[UEBA] All agent behaviors
+              normal. No anomalies.</span></div>
+          <div class="log-line"><span class="log-ts">23:31:31</span><span class="log-info">[MASTER] Cycle complete. 3
+              appointments booked. Revenue: ₹41,200</span></div>
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px;">
+          <button class="btn btn-primary" onclick="addAgentLog()">+ Simulate New Event</button>
+          <button class="btn" style="background:var(--card2);color:var(--muted);" onclick="clearLog()">Clear</button>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">📅 Autonomous Scheduling – Available Slots</div>
+        <div style="margin-bottom:12px;font-size:12px;color:var(--muted);">AI auto-selects best slot based on severity +
+          center capacity</div>
+        <div id="slots-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== SERVICE CENTER TAB ======================== -->
+  <div id="tab-servicecenter" class="main hidden">
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-title">🏪 Service Center Utilization</div>
+        <div id="util-section"></div>
+        <div class="panel-title mt8">⏰ Capacity Heatmap (Today by Hour)</div>
+        <div class="heatmap" id="heatmap"></div>
+        <div style="display:flex;justify-content:space-between;margin-top:4px;font-size:10px;color:var(--muted);">
+          <span>8 AM</span><span>10 AM</span><span>12 PM</span><span>2 PM</span><span>4 PM</span><span>6 PM</span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">📋 Today's Appointments</div>
+        <div id="appointments-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== MANUFACTURING TAB ======================== -->
+  <div id="tab-manufacturing" class="main hidden">
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-title">🏭 Recurring Defect Patterns (RCA/CAPA)</div>
+        <div id="defects-list"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">📈 Fleet-Wide Failure Distribution</div>
+        <div id="failure-dist"></div>
+        <div class="panel-title mt8" style="margin-top:18px;">🔒 UEBA Security Status</div>
+        <div style="font-size:13px;">
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
+            <span>Normal Operations</span><span class="text-green fw700">37</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
+            <span>Anomalies Detected</span><span class="text-yellow fw700">3</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
+            <span>Threats Blocked</span><span class="text-green fw700">0</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;">
+            <span>Last Scan</span><span class="text-muted">23:31:30 today</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== SIM OVERLAY ======================== -->
+  <div id="sim-overlay"
+    style="display:none;position:fixed;inset:0;background:#000a;z-index:200;display:none;align-items:center;justify-content:center;">
+    <div
+      style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;width:520px;max-width:95vw;">
+      <div style="font-size:17px;font-weight:700;margin-bottom:4px;">🤖 AI Simulation Running</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:20px;">Watch the autonomous agent detect, engage &
+        schedule in real-time</div>
+      <div id="sim-steps"></div>
+      <div style="margin-top:20px;display:flex;justify-content:flex-end;">
+        <button class="btn btn-primary" id="sim-close-btn" onclick="closeSim()" style="display:none;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ─── DATA ───────────────────────────────────────────────────────────────────
+    // ─── VEHICLES (from Prisma DB, with pre-computed failure probability) ─────
+    const VEHICLES = [
+      { id: 'MH-01-AV-4421', owner: 'Owner_1', phone: '+91-22-55001001', model: 'Tata Nexon EV', year: 2024, km: 0, last: '2026-04-14', health: 62, status: 'yellow', issues: ['Low Oil Pressure'], eng_rpm: 0, oil_p: 0.0, fuel_p: 0.0, cool_p: 24.2, oil_temp: 32.5, cool_temp: 35.1, eng_cond: 1, brake: 12.4, failProb: 38.4, failDays: 35 },
+      { id: 'DL-03-CC-9901', owner: 'Owner_2', phone: '+91-11-55002002', model: 'Maruti Brezza', year: 2023, km: 3200, last: '2026-04-14', health: 26, status: 'red', issues: ['Engine Fault', 'High Brake Wear', 'Low Oil Pressure'], eng_rpm: 3200, oil_p: 1.4, fuel_p: 38.5, cool_p: 19.2, oil_temp: 122.1, cool_temp: 108.4, eng_cond: 0, brake: 88.2, failProb: 74.6, failDays: 8 },
+      { id: 'KA-05-BN-1122', owner: 'Owner_3', phone: '+91-80-55003003', model: 'Mahindra XUV700', year: 2023, km: 2100, last: '2026-04-14', health: 61, status: 'yellow', issues: ['Brake Wear'], eng_rpm: 2100, oil_p: 4.2, fuel_p: 56.3, cool_p: 30.1, oil_temp: 94.2, cool_temp: 88.5, eng_cond: 1, brake: 45.1, failProb: 38.8, failDays: 30 },
+      { id: 'MH-12-DE-5566', owner: 'Owner_4', phone: '+91-22-55004004', model: 'Tata Safari', year: 2022, km: 2400, last: '2026-04-14', health: 66, status: 'green', issues: [], eng_rpm: 2400, oil_p: 4.0, fuel_p: 55.1, cool_p: 29.4, oil_temp: 96.4, cool_temp: 91.2, eng_cond: 1, brake: 10.2, failProb: 34.0, failDays: 45 },
+      { id: 'DL-01-ZZ-0007', owner: 'Owner_5', phone: '+91-11-55005005', model: 'Maruti Swift', year: 2021, km: 3800, last: '2026-04-14', health: 18, status: 'red', issues: ['Engine Fault', 'Critical Brake Wear', 'Low Oil Pressure'], eng_rpm: 3800, oil_p: 0.9, fuel_p: 32.4, cool_p: 14.2, oil_temp: 130.2, cool_temp: 115.6, eng_cond: 0, brake: 92.1, failProb: 82.3, failDays: 5 },
+      { id: 'HR-26-AQ-8877', owner: 'Owner_6', phone: '+91-124-5506006', model: 'Mahindra Thar', year: 2023, km: 1800, last: '2026-04-14', health: 67, status: 'green', issues: [], eng_rpm: 1800, oil_p: 3.9, fuel_p: 54.8, cool_p: 28.9, oil_temp: 92.5, cool_temp: 86.4, eng_cond: 1, brake: 15.3, failProb: 33.3, failDays: 48 },
+      { id: 'UP-16-BK-1234', owner: 'Owner_7', phone: '+91-120-5507007', model: 'Hyundai Creta', year: 2022, km: 2000, last: '2026-04-14', health: 66, status: 'green', issues: [], eng_rpm: 2000, oil_p: 4.1, fuel_p: 55.9, cool_p: 30.2, oil_temp: 93.8, cool_temp: 87.9, eng_cond: 1, brake: 22.4, failProb: 34.3, failDays: 42 },
+      { id: 'MH-04-ET-5678', owner: 'Owner_8', phone: '+91-22-55008008', model: 'Toyota Innova Hycross', year: 2024, km: 1500, last: '2026-04-14', health: 63, status: 'yellow', issues: ['Brake Wear'], eng_rpm: 1500, oil_p: 3.8, fuel_p: 54.2, cool_p: 28.5, oil_temp: 90.1, cool_temp: 84.2, eng_cond: 1, brake: 34.8, failProb: 36.6, failDays: 38 },
+      { id: 'DL-08-CA-1111', owner: 'Owner_9', phone: '+91-11-55009009', model: 'Kia Seltos', year: 2022, km: 4100, last: '2026-04-14', health: 23, status: 'red', issues: ['Engine Fault', 'High Brake Wear', 'Low Oil Pressure'], eng_rpm: 4100, oil_p: 1.2, fuel_p: 35.1, cool_p: 17.4, oil_temp: 128.4, cool_temp: 114.2, eng_cond: 0, brake: 76.5, failProb: 77.1, failDays: 7 },
+      { id: 'KA-01-MJ-9999', owner: 'Owner_10', phone: '+91-80-55010010', model: 'Tata Tiago EV', year: 2024, km: 0, last: '2026-04-14', health: 62, status: 'yellow', issues: ['Low Oil Pressure'], eng_rpm: 0, oil_p: 0.0, fuel_p: 0.0, cool_p: 22.1, oil_temp: 30.4, cool_temp: 32.8, eng_cond: 1, brake: 8.9, failProb: 37.8, failDays: 36 },
+    ];
+
+    const APPOINTMENTS = [
+      { time: '09:00', vehicle: 'VEH_DEL_00001', owner: 'Rajesh Sharma', issue: 'Brake Pads + Engine Check', center: 'Center Delhi 1', tech: 'Tech_012', duration: 120 },
+      { time: '10:00', vehicle: 'VEH_DEL_00003', owner: 'Arjun Singh', issue: 'Brake Pads + Transmission Fluid', center: 'Center Delhi 1', tech: 'Tech_027', duration: 180 },
+      { time: '11:30', vehicle: 'VEH_DEL_00007', owner: 'Anil Kumar', issue: 'Battery Replacement', center: 'Center Gurgaon', tech: 'Tech_041', duration: 60 },
+      { time: '14:00', vehicle: 'VEH_DEL_00002', owner: 'Priya Mehta', issue: 'Oil & Filter Change + Battery', center: 'Center Delhi 2', tech: 'Tech_009', duration: 90 },
+      { time: '15:30', vehicle: 'VEH_DEL_00006', owner: 'Deepa Rao', issue: 'Battery + Tire Rotation', center: 'Center Gurgaon', tech: 'Tech_033', duration: 75 },
+    ];
+
+    const DEFECTS = [
+      { pattern: 'Brake Pad Wear – Tata Nexon (2020-21)', freq: 14, rca: 'Brake pad compound degrades 23% faster in stop-start Delhi traffic conditions. Supplier batch B24 identified.', capa: 'Upgrade to premium compound; Revised OEM spec Q2-2026', status: 'review', pct: 62 },
+      { pattern: 'Battery Drain – Maruti Swift (2020)', freq: 9, rca: 'Alternator output variance in batch K19 leads to undercharging at low RPM. Affects 900–1200 RPM idle range.', capa: 'Alternator firmware recalibration deployed. ECU patch v2.1.', status: 'deploy', pct: 75 },
+      { pattern: 'Tire Pressure Loss – Mahindra XUV (2020-21)', freq: 6, rca: 'Valve stem seal tolerance out-of-spec. TPMS sensor false-negative in models before Oct 2021.', capa: 'TPMS recalibration + dealer advisory. Monitoring for recurrence.', status: 'monitor', pct: 45 },
+    ];
+
+    const CENTERS = [
+      { name: 'Center Delhi 1', loc: 'Connaught Place', util: 88, slots: ['09:00', '10:00', '14:00', '16:00'] },
+      { name: 'Center Delhi 2', loc: 'Lajpat Nagar', util: 71, slots: ['09:30', '11:00', '13:00', '15:30'] },
+      { name: 'Center Gurgaon', loc: 'Sector 14, Gurgaon', util: 65, slots: ['08:30', '10:30', '12:00', '14:30'] },
+    ];
+
+    const HEATMAP_DATA = [55, 72, 90, 85, 60, 82, 88, 92, 75, 70];
+
+    // ─── TABS ───────────────────────────────────────────────────────────────────
+    function showTab(name, el) {
+      document.querySelectorAll('[id^="tab-"]').forEach(t => t.classList.add('hidden'));
+      document.getElementById('tab-' + name).classList.remove('hidden');
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+      if (el) el.classList.add('active');
+    }
+
+    // ─── FLEET TABLE ────────────────────────────────────────────────────────────
+    function renderFleet() {
+      const tbody = document.getElementById('fleet-tbody');
+      tbody.innerHTML = VEHICLES.map((v, i) => `
+    <tr onclick="showDetail(${i})">
+      <td><b>${v.id}</b><br><span class="text-muted" style="font-size:10px;">${v.owner}</span></td>
+      <td>${v.model}<br><span class="tag">${v.year}</span></td>
+      <td>${v.km.toLocaleString()} km</td>
+      <td>
+        <div style="font-size:12px;margin-bottom:3px;font-weight:600;">${v.health}%</div>
+        <div class="health-bar-wrap"><div class="health-bar" style="width:${v.health}%;background:${v.status === 'green' ? 'var(--green)' : v.status === 'yellow' ? 'var(--yellow)' : 'var(--red)'}"></div></div>
+      </td>
+      <td><span class="badge badge-${v.status}">${v.status.toUpperCase()}</span></td>
+    </tr>
+  `).join('');
+    }
+
+    // ─── VEHICLE DETAIL ─────────────────────────────────────────────────────────
+    function showDetail(i) {
+      const v = VEHICLES[i];
+      const statusColor = v.status === 'green' ? 'var(--green)' : v.status === 'yellow' ? 'var(--yellow)' : 'var(--red)';
+      const oilOk = v.oil_p >= 2.0;
+      const rpmOk = v.eng_rpm <= 3500 || v.eng_rpm === 0;
+      const oilTempOk = v.oil_temp <= 100;
+      const coolTempOk = v.cool_temp <= 95;
+      const brakeOk = v.brake <= 50;
+      const engOk = v.eng_cond === 1;
+
+      document.getElementById('detail-title').innerHTML =
+        `📊 ${v.id} — <span class="badge badge-${v.status}">${v.status.toUpperCase()}</span>`;
+
+      // DETERMINISTIC: pre-computed from sensor formula, never changes
+      const failProb = v.failProb;
+      const failColor = failProb > 70 ? 'var(--red)' : failProb > 40 ? 'var(--yellow)' : 'var(--green)';
+      const days = v.failDays;
+
+      document.getElementById('detail-content').innerHTML = `
+    <div class="sensor-grid">
+      <div class="sensor-card">
+        <div class="sensor-label">Engine RPM</div>
+        <div class="sensor-val ${rpmOk ? 'text-green' : 'text-red'}">${v.eng_rpm}<span class="sensor-unit">rpm</span></div>
+        <div class="sensor-status ${rpmOk ? 'text-green' : 'text-red'}">${v.eng_rpm === 0 ? 'ⓘ EV / Off' : rpmOk ? '✓ Normal' : '⚠ High RPM'}</div>
+      </div>
+      <div class="sensor-card">
+        <div class="sensor-label">Lub Oil Pressure</div>
+        <div class="sensor-val ${oilOk ? 'text-green' : 'text-red'}">${v.oil_p}<span class="sensor-unit">bar</span></div>
+        <div class="sensor-status ${oilOk ? 'text-green' : 'text-red'}">${oilOk ? '✓ Normal' : '⚠ Low'}</div>
+      </div>
+      <div class="sensor-card">
+        <div class="sensor-label">Fuel Pressure</div>
+        <div class="sensor-val ${v.fuel_p >= 40 ? 'text-green' : v.fuel_p > 0 ? 'text-yellow' : 'text-muted'}">${v.fuel_p}<span class="sensor-unit">bar</span></div>
+        <div class="sensor-status ${v.fuel_p >= 40 ? 'text-green' : v.fuel_p > 0 ? 'text-yellow' : 'text-muted'}">${v.fuel_p === 0 ? 'ⓘ EV / N/A' : v.fuel_p >= 40 ? '✓ OK' : '⚠ Low'}</div>
+      </div>
+      <div class="sensor-card">
+        <div class="sensor-label">Lub Oil Temp</div>
+        <div class="sensor-val ${oilTempOk ? 'text-green' : 'text-red'}">${v.oil_temp}<span class="sensor-unit">°C</span></div>
+        <div class="sensor-status ${oilTempOk ? 'text-green' : 'text-red'}">${oilTempOk ? '✓ Normal' : '⚠ High'}</div>
+      </div>
+      <div class="sensor-card">
+        <div class="sensor-label">Coolant Temp</div>
+        <div class="sensor-val ${coolTempOk ? 'text-green' : 'text-red'}">${v.cool_temp}<span class="sensor-unit">°C</span></div>
+        <div class="sensor-status ${coolTempOk ? 'text-green' : 'text-red'}">${coolTempOk ? '✓ Normal' : '⚠ Overheating'}</div>
+      </div>
+      <div class="sensor-card">
+        <div class="sensor-label">Brake Wear</div>
+        <div class="sensor-val ${brakeOk ? 'text-green' : 'text-red'}">${v.brake}<span class="sensor-unit">%</span></div>
+        <div class="sensor-status ${brakeOk ? 'text-green' : 'text-red'}">${brakeOk ? '✓ OK' : '⚠ Replace Soon'}</div>
+      </div>
+    </div>
+    <div style="background:var(--card2);border-radius:10px;padding:14px;border:1px solid var(--border);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <div style="font-weight:600;font-size:13px;">Failure Probability</div>
+        <div style="font-size:20px;font-weight:700;color:${failColor}">${failProb}%</div>
+      </div>
+      <div class="prob-bar-wrap"><div class="prob-bar" style="width:${failProb}%;background:${failColor}"></div></div>
+      <div style="font-size:11px;color:var(--muted);">Predicted failure in ~${days} days | Engine: ${engOk ? 'Healthy' : 'Faulty'} ${v.issues.length ? '• Flags: ' + v.issues.join(', ') : ''}</div>
+      ${v.issues.length ? `<div style="margin-top:10px;background:#ef444412;border:1px solid #ef444433;border-radius:8px;padding:10px;font-size:12px;">
+        ⚠️ <b>Recommended:</b> Schedule service for ${v.issues.join(' + ')}
+      </div>`: '<div style="margin-top:10px;background:#22c55e12;border:1px solid #22c55e33;border-radius:8px;padding:10px;font-size:12px;">✅ All systems operating within normal parameters</div>'}
+    </div>
+  `;
+    }
+
+    // ─── SCHEDULING TAB ─────────────────────────────────────────────────────────
+    function renderSlots() {
+      const el = document.getElementById('slots-list');
+      el.innerHTML = CENTERS.map(c => `
+    <div style="background:var(--card2);border-radius:10px;padding:14px;border:1px solid var(--border);margin-bottom:10px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <div><b>${c.name}</b> <span class="text-muted" style="font-size:11px;">${c.loc}</span></div>
+        <span style="font-size:11px;color:${c.util > 80 ? 'var(--red)' : c.util > 60 ? 'var(--yellow)' : 'var(--green)'};">${c.util}% full</span>
+      </div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        ${c.slots.map(s => `<span style="background:var(--card);border:1px solid var(--accent);color:var(--accent);border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer;" onclick="this.style.background='var(--accent)';this.style.color='#fff';">${s}</span>`).join('')}
+      </div>
+    </div>
+  `).join('');
+    }
+
+    let logItems = [
+      { ts: '23:31:00', cls: 'log-info', msg: '[MASTER] System initialized. Monitoring 12 vehicles.' },
+      { ts: '23:31:02', cls: 'log-ok', msg: '[DATA]   Telematics stream connected. Sampling at 1Hz.' },
+      { ts: '23:31:05', cls: 'log-warn', msg: '[DIAG]   VEH_DEL_00003 – Brake wear anomaly detected (87%)' },
+      { ts: '23:31:06', cls: 'log-err', msg: '[ALERT]  VEH_DEL_00003 escalated to RED status.' },
+      { ts: '23:31:08', cls: 'log-info', msg: '[ENGAGE] Initiating voice call to Owner_3 (+91-11-54821903)' },
+      { ts: '23:31:12', cls: 'log-ok', msg: '[ENGAGE] Customer accepted appointment offer.' },
+      { ts: '23:31:14', cls: 'log-ok', msg: '[SCHED]  Slot confirmed: Center_Delhi_1 @ 2026-04-15 10:00' },
+      { ts: '23:31:30', cls: 'log-ok', msg: '[UEBA]   All agent behaviors normal. No anomalies.' },
+    ];
+    const NEW_EVENTS = [
+      { cls: 'log-warn', msg: '[DIAG]   VEH_DEL_00005 – Tire pressure drop detected (25 PSI)' },
+      { cls: 'log-err', msg: '[ALERT]  VEH_DEL_00005 elevated to YELLOW' },
+      { cls: 'log-info', msg: '[ENGAGE] SMS alert sent to Owner_5. Appointment offer pending.' },
+      { cls: 'log-ok', msg: '[SCHED]  New slot held at Center_Delhi_2 @ 2026-04-17 11:00' },
+      { cls: 'log-info', msg: '[QUALITY] Brake pattern flagged: 3 Tata Nexon in same batch' },
+      { cls: 'log-ok', msg: '[RCA]    Defect report auto-generated and sent to Manufacturing' },
+      { cls: 'log-warn', msg: '[DIAG]   VEH_DEL_00010 – Oil level dropping (last change 9,200 km ago)' },
+      { cls: 'log-ok', msg: '[ENGAGE] Proactive reminder sent. Customer self-booked via app.' },
+    ];
+    let evIdx = 0;
+    function now() { const d = new Date(); return `${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}:${d.getSeconds().toString().padStart(2, '0')}`; }
+    function addAgentLog() {
+      const ev = NEW_EVENTS[evIdx % NEW_EVENTS.length]; evIdx++;
+      const box = document.getElementById('agent-log-box');
+      const line = document.createElement('div'); line.className = 'log-line';
+      line.innerHTML = `<span class="log-ts">${now()}</span><span class="${ev.cls}">${ev.msg}</span>`;
+      box.appendChild(line); box.scrollTop = box.scrollHeight;
+    }
+    function clearLog() { document.getElementById('agent-log-box').innerHTML = ''; }
+
+    // ─── SERVICE CENTER TAB ──────────────────────────────────────────────────────
+    function renderServiceCenter() {
+      // Utilization
+      document.getElementById('util-section').innerHTML = CENTERS.map(c => `
+    <div class="util-row"><span>${c.name}</span><span style="font-weight:700;color:${c.util > 80 ? 'var(--red)' : c.util > 60 ? 'var(--yellow)' : 'var(--green)'};">${c.util}%</span></div>
+    <div class="util-bar-wrap"><div class="util-bar" style="width:${c.util}%"></div></div>
+  `).join('');
+      // Heatmap
+      const hm = document.getElementById('heatmap');
+      const labels = ['8A', '9A', '10A', '11A', '12P', '1P', '2P', '3P', '4P', '5P'];
+      hm.innerHTML = HEATMAP_DATA.map((v, i) => {
+        const bg = v > 85 ? '#ef4444' : v > 70 ? '#eab308' : 'var(--accent)';
+        return `<div class="hm-cell" style="background:${bg};" title="${labels[i]}: ${v}%">${v}%</div>`;
+      }).join('');
+      // Appointments
+      document.getElementById('appointments-list').innerHTML = APPOINTMENTS.map(a => `
+    <div class="apt-item">
+      <div class="apt-time">${a.time}</div>
+      <div class="apt-info">
+        <div class="apt-vehicle">${a.owner} <span class="text-muted" style="font-weight:400;font-size:11px;">${a.vehicle}</span></div>
+        <div class="apt-issue">${a.issue} • ${a.center}</div>
+      </div>
+      <div style="text-align:right;font-size:11px;color:var(--muted);">${a.tech}<br>${a.duration} min</div>
+    </div>
+  `).join('');
+    }
+
+    // ─── MANUFACTURING TAB ───────────────────────────────────────────────────────
+    function renderManufacturing() {
+      document.getElementById('defects-list').innerHTML = DEFECTS.map(d => `
+    <div class="defect-item">
+      <div class="defect-header">
+        <div class="defect-title">${d.pattern}</div>
+        <div class="capa-badge ${d.status === 'review' ? 'capa-review' : d.status === 'deploy' ? 'capa-deploy' : 'capa-monitor'}">${d.status === 'review' ? 'Under Review' : d.status === 'deploy' ? 'Fix Deployed' : 'Monitoring'}</div>
+      </div>
+      <div class="defect-meta">🔍 RCA: ${d.rca}</div>
+      <div class="defect-meta" style="margin-top:4px;">✅ CAPA: ${d.capa}</div>
+      <div class="defect-bar-wrap mt8"><div class="defect-bar" style="width:${d.pct}%"></div></div>
+      <div style="font-size:10px;color:var(--muted);margin-top:2px;">${d.freq} vehicles affected (${d.pct}% pattern confidence)</div>
+    </div>
+  `).join('');
+
+      // Failure distribution
+      const components = ['Brake Pads', 'Battery', 'Oil Filter', 'Tires', 'Transmission', 'Air Filter'];
+      const counts = [17, 14, 9, 8, 5, 4];
+      const total = counts.reduce((a, b) => a + b, 0);
+      document.getElementById('failure-dist').innerHTML = components.map((c, i) => `
+    <div style="margin-bottom:10px;">
+      <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px;"><span>${c}</span><span class="text-muted">${counts[i]} cases</span></div>
+      <div style="background:#1f2d45;border-radius:4px;height:6px;"><div style="height:6px;border-radius:4px;background:var(--accent);width:${Math.round(counts[i] / total * 100)}%"></div></div>
+    </div>
+  `).join('');
+    }
+
+    // ─── SIMULATION ──────────────────────────────────────────────────────────────
+    const SIM_STEPS = [
+      { icon: '📡', title: 'Sensor Anomaly Detected', desc: 'VEH_DEL_00001 — Engine temp 108°C, Oil pressure 1.4 bar. Threshold breached.', delay: 0 },
+      { icon: '🧠', title: 'AI Diagnosis Agent Processing', desc: 'Failure probability: 91% | Components: Brake Pads + Engine | Severity: RED', delay: 1400 },
+      { icon: '📞', title: 'Customer Engagement Agent', desc: 'Voice call initiated to Rajesh Sharma (+91-11-54201034). Explaining issue in Hindi.', delay: 2800 },
+      { icon: '✅', title: 'Customer Accepted', desc: 'Appointment offer accepted (acceptance rate for RED: 85%). Confirmation pending.', delay: 4200 },
+      { icon: '📅', title: 'Scheduling Agent Booking', desc: 'Checking 3 service centers… Best slot: Center Delhi 1 @ 2026-04-15 09:00', delay: 5600 },
+      { icon: '🎫', title: 'Appointment Confirmed', desc: 'APT_20260415_1234 created. SMS & app notification sent to customer.', delay: 7000 },
+      { icon: '🏭', title: 'Manufacturing Feedback Loop', desc: 'Brake wear pattern flagged across 3 Tata Nexon (2020-21). RCA report sent.', delay: 8400 },
+      { icon: '🔒', title: 'UEBA Security Check', desc: 'All 6 agent actions logged. No anomalies detected. Audit trail saved.', delay: 9800 },
+    ];
+
+    function runSimulation() {
+      const overlay = document.getElementById('sim-overlay');
+      overlay.style.display = 'flex';
+      document.getElementById('sim-close-btn').style.display = 'none';
+      const stepsEl = document.getElementById('sim-steps');
+      stepsEl.innerHTML = SIM_STEPS.map((_, i) => `
+    <div class="sim-step" id="sstep-${i}">
+      <div class="step-icon" id="sicon-${i}">${SIM_STEPS[i].icon}</div>
+      <div class="step-body">
+        <div class="step-title">${SIM_STEPS[i].title}</div>
+        <div class="step-desc">${SIM_STEPS[i].desc}</div>
+        <div class="step-ts" id="sts-${i}"></div>
+      </div>
+    </div>
+  `).join('');
+
+      SIM_STEPS.forEach((s, i) => {
+        setTimeout(() => {
+          const stepEl = document.getElementById(`sstep-${i}`);
+          const iconEl = document.getElementById(`sicon-${i}`);
+          const tsEl = document.getElementById(`sts-${i}`);
+          if (i > 0) {
+            document.getElementById(`sstep-${i - 1}`).classList.remove('active');
+            document.getElementById(`sicon-${i - 1}`).classList.remove('active');
+            document.getElementById(`sicon-${i - 1}`).classList.add('done');
+            document.getElementById(`sstep-${i - 1}`).classList.add('done');
+          }
+          stepEl.classList.add('active');
+          iconEl.classList.add('active');
+          tsEl.textContent = now();
+          if (i === SIM_STEPS.length - 1) {
+            setTimeout(() => {
+              stepEl.classList.add('done');
+              iconEl.classList.remove('active');
+              iconEl.classList.add('done');
+              document.getElementById('sim-close-btn').style.display = 'inline-block';
+            }, 1000);
+          }
+        }, s.delay);
+      });
+    }
+    function closeSim() { document.getElementById('sim-overlay').style.display = 'none'; }
+
+    // ─── INIT ────────────────────────────────────────────────────────────────────
+    renderFleet();
+    renderSlots();
+    renderServiceCenter();
+    renderManufacturing();
+  </script>
+</body>
+
+</html>

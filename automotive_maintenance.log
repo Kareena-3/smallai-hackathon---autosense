@@ -1,0 +1,35 @@
+2026-04-14 00:26:04,412 | MainThread   | __main__             | INFO     | Generating synthetic vehicle fleet data...
+2026-04-14 00:26:04,413 | MainThread   | __main__             | INFO     | Generated 10 vehicles
+2026-04-14 00:26:04,414 | MainThread   | __main__             | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-14 00:26:04,415 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-14 00:26:04,416 | MainThread   | __main__             | INFO     | Starting orchestration cycle...
+2026-04-14 00:26:04,417 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-14 00:26:04,427 | ThreadPoolExecutor-0_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_1! Your Kia Seltos is due for Tires maintenance. I recommend booking within the next 30 days to avoid any issues. Are you available this week?
+2026-04-14 00:26:04,435 | ThreadPoolExecutor-0_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-16 16:00
+2026-04-14 00:26:04,437 | ThreadPoolExecutor-0_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_2! Our AI system detected that your Maruti Swift will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-14 00:26:04,439 | ThreadPoolExecutor-0_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_3! Our AI system detected that your Renault Duster will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-14 00:26:04,440 | ThreadPoolExecutor-0_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_4! Our AI system detected that your Mahindra XUV will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-14 00:26:04,441 | ThreadPoolExecutor-0_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_5! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-14 00:26:04,442 | ThreadPoolExecutor-0_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00003 @ Center_Delhi_1 on 2026-04-15 10:00
+2026-04-14 00:26:04,444 | ThreadPoolExecutor-0_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-15 16:00
+2026-04-14 00:26:04,450 | ThreadPoolExecutor-0_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_6! Your Skoda Rapid is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-14 00:26:04,451 | ThreadPoolExecutor-0_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_8! Your Skoda Rapid is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-14 00:26:04,453 | ThreadPoolExecutor-0_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00006 @ Center_Delhi_1 on 2026-04-18 14:00
+2026-04-14 00:26:04,455 | ThreadPoolExecutor-0_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_9! Our AI system detected that your Renault Duster will benefit from Oil & Filter service soon. We have flexible slots available. When would suit you best?
+2026-04-14 00:26:04,456 | ThreadPoolExecutor-0_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-15 14:00
+2026-04-14 00:26:04,457 | ThreadPoolExecutor-0_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00006 - Satisfaction: 7/10
+2026-04-14 00:26:04,460 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-14 00:26:04,462 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-14 00:26:04,462 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-14 00:26:04,463 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-14 00:26:04,464 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-14 00:26:04,465 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-14 00:26:04,466 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-14 00:26:04,467 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-14 00:26:04,467 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-14 00:26:04,468 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-14 00:26:04,469 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-14 00:26:04,469 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Skoda Rapid_Battery - 3 vehicles affected - Cost saved: Rs.24000
+2026-04-14 00:26:04,470 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Skoda Rapid_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-14 00:26:04,471 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.05s | Throughput: 184.49 vehicles/sec
+2026-04-14 00:26:04,486 | MainThread   | __main__             | INFO     | Results saved to maintenance_system_results.json

@@ -1,0 +1,30 @@
+// AutoSense AI — Vehicle Telemetry Database
+// Easily extend by adding new fields or models below
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model VehicleTelemetry {
+  id               Int      @id @default(autoincrement())
+  timestamp        DateTime
+  vehicle_id       String
+  make             String
+  model            String
+  engine_rpm       Float
+  lub_oil_pressure Float
+  fuel_pressure    Float
+  coolant_pressure Float
+  lub_oil_temp     Float
+  coolant_temp     Float
+  engine_condition Int      // 1 = healthy, 0 = faulty
+  brake_wear_pct   Float
+  failure_prob     Float    // pre-computed deterministic probability (0-100)
+
+  @@index([vehicle_id])
+  @@index([timestamp])
+}
