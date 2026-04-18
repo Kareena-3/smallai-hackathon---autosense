@@ -136,6 +136,16 @@
       animation: pulse-btn 2s infinite;
     }
 
+    .status-update {
+      animation: highlight-pulse 1.2s ease-in-out;
+    }
+
+    @keyframes highlight-pulse {
+      0% { transform: scale(1); background: rgba(59, 130, 246, 0.15); }
+      50% { transform: scale(1.02); background: rgba(59, 130, 246, 0.28); }
+      100% { transform: scale(1); background: transparent; }
+    }
+
     @keyframes pulse-btn {
 
       0%,
@@ -742,7 +752,7 @@
     <div class="grid-4">
       <div class="stat-card">
         <div class="stat-label">Total Fleet Vehicles</div>
-        <div class="stat-val">10</div>
+        <div class="stat-val" id="stat-total">10</div>
         <div class="stat-delta delta-up">↑ Synced from Prisma DB</div>
       </div>
       <div class="stat-card">
@@ -783,6 +793,24 @@
         <div class="panel-title" id="detail-title">📊 Select a vehicle to diagnose</div>
         <div id="detail-content" class="text-muted" style="font-size:13px;margin-top:40px;text-align:center;">
           ← Click any vehicle row to see predictive diagnostics
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-title">🏭 Manufacturing Insights</div>
+        <div id="manufacturing-insights" style="min-height:180px;">
+          <div class="text-muted" style="padding:14px;">Run the AI simulation to see recurring failure insights.</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">📣 Communication & Security</div>
+        <div id="comm-summary" style="margin-bottom:16px;min-height:90px;">
+          <div class="text-muted" style="padding:14px;">Customer notification and response status will appear here.</div>
+        </div>
+        <div id="security-summary" style="min-height:70px;">
+          <div class="text-muted" style="padding:14px;">System health status updates will appear here.</div>
         </div>
       </div>
     </div>
@@ -919,11 +947,11 @@
     ];
 
     const APPOINTMENTS = [
-      { time: '09:00', vehicle: 'VEH_DEL_00001', owner: 'Rajesh Sharma', issue: 'Brake Pads + Engine Check', center: 'Center Delhi 1', tech: 'Tech_012', duration: 120 },
-      { time: '10:00', vehicle: 'VEH_DEL_00003', owner: 'Arjun Singh', issue: 'Brake Pads + Transmission Fluid', center: 'Center Delhi 1', tech: 'Tech_027', duration: 180 },
-      { time: '11:30', vehicle: 'VEH_DEL_00007', owner: 'Anil Kumar', issue: 'Battery Replacement', center: 'Center Gurgaon', tech: 'Tech_041', duration: 60 },
-      { time: '14:00', vehicle: 'VEH_DEL_00002', owner: 'Priya Mehta', issue: 'Oil & Filter Change + Battery', center: 'Center Delhi 2', tech: 'Tech_009', duration: 90 },
-      { time: '15:30', vehicle: 'VEH_DEL_00006', owner: 'Deepa Rao', issue: 'Battery + Tire Rotation', center: 'Center Gurgaon', tech: 'Tech_033', duration: 75 },
+      { time: '09:00', vehicle: 'VEH_DEL_00001', owner: 'Rajesh Sharma', issue: 'Brake Pads + Engine Check', center: 'Center Delhi 1', tech: 'Tech_012', duration: 120, priority: 'High', suggested_slot: '09:00', response_status: 'Confirmed' },
+      { time: '10:00', vehicle: 'VEH_DEL_00003', owner: 'Arjun Singh', issue: 'Brake Pads + Transmission Fluid', center: 'Center Delhi 1', tech: 'Tech_027', duration: 180, priority: 'Medium', suggested_slot: '10:00', response_status: 'Pending' },
+      { time: '11:30', vehicle: 'VEH_DEL_00007', owner: 'Anil Kumar', issue: 'Battery Replacement', center: 'Center Gurgaon', tech: 'Tech_041', duration: 60, priority: 'Medium', suggested_slot: '11:30', response_status: 'Pending' },
+      { time: '14:00', vehicle: 'VEH_DEL_00002', owner: 'Priya Mehta', issue: 'Oil & Filter Change + Battery', center: 'Center Delhi 2', tech: 'Tech_009', duration: 90, priority: 'Low', suggested_slot: '14:00', response_status: 'Confirmed' },
+      { time: '15:30', vehicle: 'VEH_DEL_00006', owner: 'Deepa Rao', issue: 'Battery + Tire Rotation', center: 'Center Gurgaon', tech: 'Tech_033', duration: 75, priority: 'Low', suggested_slot: '15:30', response_status: 'Pending' },
     ];
 
     const DEFECTS = [
@@ -1098,7 +1126,8 @@
       <div class="apt-time">${a.time}</div>
       <div class="apt-info">
         <div class="apt-vehicle">${a.owner} <span class="text-muted" style="font-weight:400;font-size:11px;">${a.vehicle}</span></div>
-        <div class="apt-issue">${a.issue} • ${a.center}</div>
+        <div class="apt-issue">${a.issue} • ${a.center} • <strong>${a.priority || 'Medium'}</strong></div>
+        <div style="font-size:11px;color:var(--muted);margin-top:4px;">Suggested slot: ${a.suggested_slot_detail || a.suggested_slot || 'Auto-select'} • ${a.response_status || 'Pending'}</div>
       </div>
       <div style="text-align:right;font-size:11px;color:var(--muted);">${a.tech}<br>${a.duration} min</div>
     </div>
@@ -1144,10 +1173,98 @@
       { icon: '🔒', title: 'UEBA Security Check', desc: 'All 6 agent actions logged. No anomalies detected. Audit trail saved.', delay: 9800 },
     ];
 
-    function runSimulation() {
+    function addHighlight(el) {
+      el.classList.add('status-update');
+      setTimeout(() => el.classList.remove('status-update'), 1400);
+    }
+
+    function updateDashboardFromResult(data) {
+      const totalVehicles = document.getElementById('stat-total');
+      const criticalAlerts = document.getElementById('stat-critical');
+      const appointmentsToday = document.getElementById('stat-apts');
+      const utilization = document.getElementById('stat-util');
+
+      const total = data.metadata?.total_vehicles ?? VEHICLES.length;
+      const redAlerts = Array.isArray(data.vehicles) ? data.vehicles.filter(v => v.alert_level?.toLowerCase() === 'red').length : 0;
+      const apptCount = data.summary?.total_appointments ?? (Array.isArray(data.appointments) ? data.appointments.length : 0);
+      const utilPercent = Math.min(96, Math.max(40, 50 + apptCount * 4));
+
+      totalVehicles.textContent = total;
+      criticalAlerts.textContent = redAlerts;
+      appointmentsToday.textContent = apptCount;
+      utilization.textContent = `${utilPercent}%`;
+
+      addHighlight(totalVehicles);
+      addHighlight(criticalAlerts);
+      addHighlight(appointmentsToday);
+      addHighlight(utilization);
+
+      const resultMap = (data.vehicles || []).reduce((map, item) => {
+        map[item.vehicle_id] = item;
+        return map;
+      }, {});
+
+      VEHICLES.forEach(v => {
+        const result = resultMap[v.id];
+        if (result) {
+          const level = result.alert_level?.toLowerCase();
+          v.status = level === 'red' ? 'red' : level === 'yellow' ? 'yellow' : 'green';
+          if (Array.isArray(result.failures) && result.failures.length) {
+            v.issues = result.failures.map(f => f.component || 'Issue');
+          }
+        }
+      });
+
+      if (Array.isArray(data.appointments) && data.appointments.length) {
+        APPOINTMENTS.length = 0;
+        data.appointments.forEach(a => {
+          APPOINTMENTS.push({
+            time: a.appointment_time?.slice(0, 5) || a.appointment_time || 'TBC',
+            vehicle: a.vehicle_id || 'Unknown',
+            owner: a.customer_name || 'Customer',
+            issue: Array.isArray(a.predicted_failures) && a.predicted_failures.length ? a.predicted_failures.join(', ') : 'Service check',
+            center: a.service_center || 'Auto Service Center',
+            tech: 'AutoSched',
+            duration: a.estimated_duration_minutes ?? 90,
+          });
+        });
+      }
+    }
+
+    async function runSimulation() {
+      const button = document.querySelector('.btn-sim');
+      const originalText = button.textContent;
+      button.textContent = 'Running AI Simulation...';
+      button.disabled = true;
+
       const overlay = document.getElementById('sim-overlay');
       overlay.style.display = 'flex';
       document.getElementById('sim-close-btn').style.display = 'none';
+      const stepsEl = document.getElementById('sim-steps');
+      stepsEl.innerHTML = `<div style="font-size:14px;color:var(--text);margin-bottom:14px;">Connecting to backend AI engine...</div>`;
+
+      try {
+        const response = await fetch('http://127.0.0.1:8000/simulate');
+        if (!response.ok) {
+          throw new Error(`Server returned ${response.status}`);
+        }
+        const data = await response.json();
+        stepsEl.innerHTML = `<div style="font-size:14px;color:var(--text);margin-bottom:14px;">AI simulation completed successfully. Updating dashboard...</div>`;
+        updateDashboardFromResult(data);
+        renderFleet();
+        renderServiceCenter();
+        renderManufacturing();
+        setTimeout(playSimulationSteps, 500);
+      } catch (error) {
+        stepsEl.innerHTML = `<div style="font-size:14px;color:#fbbf24;margin-bottom:10px;">Unable to reach backend API.</div><div style="font-size:12px;color:var(--muted);">${error.message}</div>`;
+        document.getElementById('sim-close-btn').style.display = 'inline-block';
+      } finally {
+        button.textContent = originalText;
+        button.disabled = false;
+      }
+    }
+
+    function playSimulationSteps() {
       const stepsEl = document.getElementById('sim-steps');
       stepsEl.innerHTML = SIM_STEPS.map((_, i) => `
     <div class="sim-step" id="sstep-${i}">
@@ -1166,10 +1283,12 @@
           const iconEl = document.getElementById(`sicon-${i}`);
           const tsEl = document.getElementById(`sts-${i}`);
           if (i > 0) {
-            document.getElementById(`sstep-${i - 1}`).classList.remove('active');
-            document.getElementById(`sicon-${i - 1}`).classList.remove('active');
-            document.getElementById(`sicon-${i - 1}`).classList.add('done');
-            document.getElementById(`sstep-${i - 1}`).classList.add('done');
+            const prevStep = document.getElementById(`sstep-${i - 1}`);
+            const prevIcon = document.getElementById(`sicon-${i - 1}`);
+            prevStep.classList.remove('active');
+            prevIcon.classList.remove('active');
+            prevIcon.classList.add('done');
+            prevStep.classList.add('done');
           }
           stepEl.classList.add('active');
           iconEl.classList.add('active');
@@ -1185,6 +1304,112 @@
         }, s.delay);
       });
     }
+
+    function renderManufacturingInsights(insights = []) {
+      const container = document.getElementById('manufacturing-insights');
+      if (!insights || !insights.length) {
+        container.innerHTML = `<div class="text-muted" style="padding:14px;">No repeat manufacturing insights available yet.</div>`;
+        return;
+      }
+
+      container.innerHTML = insights.map(insight => `
+        <div style="background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:10px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+            <div style="font-weight:700;">${insight.title}</div>
+            <span class="badge ${insight.severity === 'High' ? 'badge-red' : insight.severity === 'Medium' ? 'badge-yellow' : 'badge-green'}">${insight.severity}</span>
+          </div>
+          <div style="font-size:12px;color:var(--muted);">${insight.vehicles ? insight.vehicles + ' affected vehicles' : 'No repeat pattern found'}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderCommunicationSummary(data) {
+      const comm = data.communication_summary || { notifications_sent: 0, confirmed_responses: 0, pending_responses: 0 };
+      const security = data.system_status || 'Normal';
+
+      document.getElementById('comm-summary').innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <div>
+            <div style="font-size:13px;font-weight:700;">Customer Communication</div>
+            <div style="font-size:12px;color:var(--muted);">Notifications sent: ${comm.notifications_sent}</div>
+          </div>
+          <span class="badge ${comm.pending_responses ? 'badge-yellow' : 'badge-green'}">${comm.pending_responses ? 'Pending' : 'Confirmed'}</span>
+        </div>
+        <div style="font-size:12px;color:var(--muted);">Confirmed: ${comm.confirmed_responses} • Pending: ${comm.pending_responses}</div>
+      `;
+
+      document.getElementById('security-summary').innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-size:13px;font-weight:700;">UEBA Security</div>
+            <div style="font-size:12px;color:var(--muted);">Auto-agent security posture based on anomaly detection.</div>
+          </div>
+          <span class="badge ${security === 'Normal' ? 'badge-green' : 'badge-red'}">${security}</span>
+        </div>
+      `;
+    }
+
+    function updateDashboardFromResult(data) {
+      const totalVehicles = document.getElementById('stat-total');
+      const criticalAlerts = document.getElementById('stat-critical');
+      const appointmentsToday = document.getElementById('stat-apts');
+      const utilization = document.getElementById('stat-util');
+
+      const total = data.metadata?.total_vehicles ?? VEHICLES.length;
+      const redAlerts = Array.isArray(data.vehicles) ? data.vehicles.filter(v => v.alert_level?.toLowerCase() === 'red').length : 0;
+      const apptCount = data.summary?.total_appointments ?? (Array.isArray(data.appointments) ? data.appointments.length : 0);
+      const utilPercent = Math.min(96, Math.max(40, 50 + apptCount * 4));
+
+      totalVehicles.textContent = total;
+      criticalAlerts.textContent = redAlerts;
+      appointmentsToday.textContent = apptCount;
+      utilization.textContent = `${utilPercent}%`;
+
+      addHighlight(totalVehicles);
+      addHighlight(criticalAlerts);
+      addHighlight(appointmentsToday);
+      addHighlight(utilization);
+
+      const resultMap = (data.vehicles || []).reduce((map, item) => {
+        map[item.vehicle_id] = item;
+        return map;
+      }, {});
+
+      VEHICLES.forEach(v => {
+        const result = resultMap[v.id];
+        if (result) {
+          const level = result.alert_level?.toLowerCase();
+          v.status = level === 'red' ? 'red' : level === 'yellow' ? 'yellow' : 'green';
+          if (Array.isArray(result.failures) && result.failures.length) {
+            v.issues = result.failures.map(f => f.component || 'Issue');
+          }
+        }
+      });
+
+      const suggestionAppointments = data.scheduling_suggestions || data.appointments || [];
+      if (Array.isArray(suggestionAppointments) && suggestionAppointments.length) {
+        APPOINTMENTS.length = 0;
+        suggestionAppointments.forEach(a => {
+          APPOINTMENTS.push({
+            time: a.appointment_time?.slice(0, 5) || a.appointment_time || a.time || 'TBC',
+            vehicle: a.vehicle_id || a.vehicle || 'Unknown',
+            owner: a.customer_name || a.owner || 'Customer',
+            issue: Array.isArray(a.predicted_failures) && a.predicted_failures.length ? a.predicted_failures.join(', ') : a.issue || 'Service check',
+            center: a.service_center || a.center || 'Service Center',
+            tech: a.technician || a.tech || 'Tech Auto',
+            duration: a.estimated_duration_minutes ?? a.duration ?? 90,
+            priority: a.priority || 'Medium',
+            suggested_slot: a.suggested_slot || (a.appointment_time?.slice(0, 5) || a.time || 'TBC'),
+            suggested_slot_detail: a.suggested_slot_detail || `${a.appointment_date || ''} ${a.suggested_slot || a.time || ''}`.trim(),
+            response_status: a.response_status || 'Pending',
+          });
+        });
+      }
+
+      renderManufacturingInsights(data.manufacturing_insights || []);
+      renderCommunicationSummary(data);
+    }
+
     function closeSim() { document.getElementById('sim-overlay').style.display = 'none'; }
 
     // ─── INIT ────────────────────────────────────────────────────────────────────
@@ -1192,6 +1417,8 @@
     renderSlots();
     renderServiceCenter();
     renderManufacturing();
+    renderManufacturingInsights();
+    renderCommunicationSummary({ communication_summary: { notifications_sent: 0, confirmed_responses: 0, pending_responses: 0 }, system_status: 'Normal' });
   </script>
 </body>
 

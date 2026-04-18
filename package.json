@@ -8,6 +8,7 @@
     "db:migrate": "npx prisma migrate dev",
     "db:studio": "npx prisma studio",
     "start": "npx serve . -l 3000",
+    "api": "uvicorn api:app --reload",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "prisma": {
