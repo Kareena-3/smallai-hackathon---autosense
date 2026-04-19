@@ -285,3 +285,916 @@
 2026-04-19 02:27:40,341 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
 2026-04-19 02:27:40,342 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.07s | Throughput: 141.65 vehicles/sec
 2026-04-19 02:27:40,363 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 12:55:36,446 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 12:55:36,460 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 12:55:36,461 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 12:55:36,466 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 12:55:36,466 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 12:55:36,466 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 12:55:36,520 | ThreadPoolExecutor-0_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_1! Our AI system detected that your Tata Nexon will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 12:55:36,522 | ThreadPoolExecutor-0_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_2! Our AI system detected that your Renault Duster will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 12:55:36,525 | ThreadPoolExecutor-0_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_3! I'm calling from AutoCare Service Center. We've detected your Honda CRV needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 12:55:36,528 | ThreadPoolExecutor-0_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-23 10:00
+2026-04-19 12:55:36,531 | ThreadPoolExecutor-0_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-23 09:00
+2026-04-19 12:55:36,533 | ThreadPoolExecutor-0_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_6! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Transmission Fluid service in about 60 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 12:55:36,536 | ThreadPoolExecutor-0_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_7! I'm calling from AutoCare Service Center. We've detected your Mahindra XUV needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 12:55:36,537 | ThreadPoolExecutor-0_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_8! Your Honda CRV is due for Brake Pads maintenance. I recommend booking within the next 1 days to avoid any issues. Are you available this week?
+2026-04-19 12:55:36,538 | ThreadPoolExecutor-0_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00001 - Satisfaction: 8/10
+2026-04-19 12:55:36,539 | ThreadPoolExecutor-0_5 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_9! Our AI system detected that your Honda CRV will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 12:55:36,540 | ThreadPoolExecutor-0_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 10/10
+2026-04-19 12:55:36,544 | ThreadPoolExecutor-0_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00006 @ Center_Delhi_1 on 2026-04-22 16:00
+2026-04-19 12:55:36,545 | ThreadPoolExecutor-0_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-20 16:00
+2026-04-19 12:55:36,546 | ThreadPoolExecutor-0_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-23 15:00
+2026-04-19 12:55:36,548 | ThreadPoolExecutor-0_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_10! I'm calling from AutoCare Service Center. We've detected your Kia Seltos needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 12:55:36,549 | ThreadPoolExecutor-0_5 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-20 09:00
+2026-04-19 12:55:36,550 | ThreadPoolExecutor-0_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00006 - Satisfaction: 9/10
+2026-04-19 12:55:36,551 | ThreadPoolExecutor-0_4 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00007 - Satisfaction: 8/10
+2026-04-19 12:55:36,551 | ThreadPoolExecutor-0_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00008 - Satisfaction: 8/10
+2026-04-19 12:55:36,555 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 12:55:36,561 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:55:36,562 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:55:36,562 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:55:36,562 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:55:36,562 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:55:36,563 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:55:36,563 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:55:36,563 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:55:36,563 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:55:36,564 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:55:36,564 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Honda CRV_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 12:55:36,565 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Honda CRV_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 12:55:36,565 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.10s | Throughput: 101.1 vehicles/sec
+2026-04-19 12:55:36,587 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 12:57:02,693 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 12:57:02,696 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 12:57:02,696 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 12:57:02,697 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 12:57:02,698 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 12:57:02,698 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 12:57:02,702 | ThreadPoolExecutor-1_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_1! I'm calling from AutoCare Service Center. We've detected your Hyundai Creta needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 12:57:02,704 | ThreadPoolExecutor-1_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_2! I'm calling from AutoCare Service Center. We've detected your Tata Nexon needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 12:57:02,706 | ThreadPoolExecutor-1_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-21 10:00
+2026-04-19 12:57:02,707 | ThreadPoolExecutor-1_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_3! Our AI system detected that your Kia Seltos will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 12:57:02,708 | ThreadPoolExecutor-1_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_4! Your Mahindra XUV is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 12:57:02,710 | ThreadPoolExecutor-1_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 9/10
+2026-04-19 12:57:02,713 | ThreadPoolExecutor-1_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_5! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 12:57:02,714 | ThreadPoolExecutor-1_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_6! I'm calling from AutoCare Service Center. We've detected your Hyundai Creta needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 12:57:02,715 | ThreadPoolExecutor-1_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-21 16:00
+2026-04-19 12:57:02,718 | ThreadPoolExecutor-1_5 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_10! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Oil & Filter service in about 1 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 12:57:02,718 | ThreadPoolExecutor-1_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_9! I'm calling from AutoCare Service Center. We've detected your Tata Nexon needs Brake Pads service in about 1 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 12:57:02,720 | ThreadPoolExecutor-1_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-20 10:00
+2026-04-19 12:57:02,721 | ThreadPoolExecutor-1_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00004 - Satisfaction: 9/10
+2026-04-19 12:57:02,722 | ThreadPoolExecutor-1_5 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-22 14:00
+2026-04-19 12:57:02,724 | ThreadPoolExecutor-1_5 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00010 - Satisfaction: 7/10
+2026-04-19 12:57:02,723 | ThreadPoolExecutor-1_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 9/10
+2026-04-19 12:57:02,722 | ThreadPoolExecutor-1_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-23 14:00
+2026-04-19 12:57:02,725 | ThreadPoolExecutor-1_4 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00009 - Satisfaction: 7/10
+2026-04-19 12:57:02,729 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 12:57:02,731 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:57:02,731 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:57:02,731 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:57:02,732 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:57:02,732 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:57:02,732 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:57:02,733 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:57:02,733 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:57:02,734 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:57:02,734 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 12:57:02,734 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Hyundai Creta_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 12:57:02,735 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Tata Nexon_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 12:57:02,735 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Skoda Rapid_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 12:57:02,736 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.04s | Throughput: 270.03 vehicles/sec
+2026-04-19 12:57:02,750 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:03:38,219 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:03:38,225 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:03:38,227 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:03:38,230 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:03:38,230 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:03:38,231 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:03:38,251 | ThreadPoolExecutor-0_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_1! Our AI system detected that your Kia Seltos will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:03:38,252 | ThreadPoolExecutor-0_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_2! Our AI system detected that your Skoda Rapid will benefit from Transmission Fluid service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:03:38,260 | ThreadPoolExecutor-0_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_5! Your Hyundai Creta is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:03:38,262 | ThreadPoolExecutor-0_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_7! Your Renault Duster is due for Tires maintenance. I recommend booking within the next 30 days to avoid any issues. Are you available this week?
+2026-04-19 13:03:38,262 | ThreadPoolExecutor-0_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_9! I'm calling from AutoCare Service Center. We've detected your Honda CRV needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:03:38,264 | ThreadPoolExecutor-0_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-21 10:00
+2026-04-19 13:03:38,264 | ThreadPoolExecutor-0_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_8! Our AI system detected that your Kia Seltos will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:03:38,265 | ThreadPoolExecutor-0_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_10! I'm calling from AutoCare Service Center. We've detected your Hyundai Creta needs Brake Pads service in about 14 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:03:38,268 | ThreadPoolExecutor-0_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 9/10
+2026-04-19 13:03:38,269 | ThreadPoolExecutor-0_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-23 16:00
+2026-04-19 13:03:38,270 | ThreadPoolExecutor-0_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-23 14:00
+2026-04-19 13:03:38,271 | ThreadPoolExecutor-0_4 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00010 - Satisfaction: 10/10
+2026-04-19 13:03:38,272 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:03:38,274 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:38,274 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:38,275 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:38,275 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:38,276 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:38,278 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:38,278 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:38,278 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:38,279 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:38,279 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:38,280 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Hyundai Creta_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 13:03:38,280 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Hyundai Creta_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 13:03:38,280 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.05s | Throughput: 201.02 vehicles/sec
+2026-04-19 13:03:38,290 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:03:53,075 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:03:53,076 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:03:53,076 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:03:53,077 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:03:53,078 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:03:53,078 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:03:53,081 | ThreadPoolExecutor-1_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_1! Your Honda CRV is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:03:53,083 | ThreadPoolExecutor-1_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-21 14:00
+2026-04-19 13:03:53,084 | ThreadPoolExecutor-1_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_2! I'm calling from AutoCare Service Center. We've detected your Hyundai Creta needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:03:53,085 | ThreadPoolExecutor-1_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00001 - Satisfaction: 9/10
+2026-04-19 13:03:53,089 | ThreadPoolExecutor-1_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-23 15:00
+2026-04-19 13:03:53,090 | ThreadPoolExecutor-1_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_8! Your Kia Seltos is due for Transmission Fluid maintenance. I recommend booking within the next 60 days to avoid any issues. Are you available this week?
+2026-04-19 13:03:53,091 | ThreadPoolExecutor-1_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_6! Your Tata Nexon is due for Transmission Fluid maintenance. I recommend booking within the next 60 days to avoid any issues. Are you available this week?
+2026-04-19 13:03:53,092 | ThreadPoolExecutor-1_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_9! Your Maruti Swift is due for Transmission Fluid maintenance. I recommend booking within the next 60 days to avoid any issues. Are you available this week?
+2026-04-19 13:03:53,092 | ThreadPoolExecutor-1_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_10! Your Kia Seltos is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:03:53,093 | ThreadPoolExecutor-1_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 10/10
+2026-04-19 13:03:53,094 | ThreadPoolExecutor-1_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-22 15:00
+2026-04-19 13:03:53,095 | ThreadPoolExecutor-1_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00006 @ Center_Delhi_1 on 2026-04-22 10:00
+2026-04-19 13:03:53,096 | ThreadPoolExecutor-1_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-23 14:00
+2026-04-19 13:03:53,097 | ThreadPoolExecutor-1_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-22 15:00
+2026-04-19 13:03:53,097 | ThreadPoolExecutor-1_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00008 - Satisfaction: 9/10
+2026-04-19 13:03:53,098 | ThreadPoolExecutor-1_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00006 - Satisfaction: 8/10
+2026-04-19 13:03:53,098 | ThreadPoolExecutor-1_4 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00009 - Satisfaction: 7/10
+2026-04-19 13:03:53,099 | ThreadPoolExecutor-1_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00010 - Satisfaction: 9/10
+2026-04-19 13:03:53,100 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:03:53,101 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:53,101 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:53,102 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:53,102 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:53,102 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:53,102 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:53,102 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:53,103 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:53,103 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:53,104 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:03:53,105 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.03s | Throughput: 374.74 vehicles/sec
+2026-04-19 13:03:53,112 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:04:24,987 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:04:24,988 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:04:24,989 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:04:24,990 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:04:24,990 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:04:24,990 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:04:24,994 | ThreadPoolExecutor-2_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_1! I'm calling from AutoCare Service Center. We've detected your Kia Seltos needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:04:24,996 | ThreadPoolExecutor-2_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-20 10:00
+2026-04-19 13:04:24,997 | ThreadPoolExecutor-2_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_2! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:04:24,999 | ThreadPoolExecutor-2_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_3! Our AI system detected that your Maruti Swift will benefit from Brake Pads service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:04:24,998 | ThreadPoolExecutor-2_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00001 - Satisfaction: 8/10
+2026-04-19 13:04:25,000 | ThreadPoolExecutor-2_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-20 14:00
+2026-04-19 13:04:25,002 | ThreadPoolExecutor-2_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_7! I'm calling from AutoCare Service Center. We've detected your Tata Nexon needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:04:25,003 | ThreadPoolExecutor-2_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_5! Your Renault Duster is due for Transmission Fluid maintenance. I recommend booking within the next 60 days to avoid any issues. Are you available this week?
+2026-04-19 13:04:25,004 | ThreadPoolExecutor-2_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 8/10
+2026-04-19 13:04:25,005 | ThreadPoolExecutor-2_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_8! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Brake Pads service in about 1 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:04:25,006 | ThreadPoolExecutor-2_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_10! I'm calling from AutoCare Service Center. We've detected your Maruti Swift needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:04:25,007 | ThreadPoolExecutor-2_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-20 14:00
+2026-04-19 13:04:25,010 | ThreadPoolExecutor-2_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-21 15:00
+2026-04-19 13:04:25,012 | ThreadPoolExecutor-2_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-21 16:00
+2026-04-19 13:04:25,014 | ThreadPoolExecutor-2_4 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00010 - Satisfaction: 10/10
+2026-04-19 13:04:25,015 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:04:25,016 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:04:25,017 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:04:25,017 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:04:25,017 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:04:25,017 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:04:25,018 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:04:25,018 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:04:25,018 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:04:25,018 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:04:25,018 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:04:25,019 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Maruti Swift_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 13:04:25,019 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.03s | Throughput: 343.12 vehicles/sec
+2026-04-19 13:04:25,025 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:05:12,603 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:05:12,604 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:05:12,604 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:05:12,605 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:05:12,606 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:05:12,606 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:05:12,611 | ThreadPoolExecutor-3_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_2! I'm calling from AutoCare Service Center. We've detected your Mahindra XUV needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:05:12,613 | ThreadPoolExecutor-3_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_3! I'm calling from AutoCare Service Center. We've detected your Tata Nexon needs Oil & Filter service in about 1 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:05:12,616 | ThreadPoolExecutor-3_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_4! Your Renault Duster is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:05:12,614 | ThreadPoolExecutor-3_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-22 14:00
+2026-04-19 13:05:12,617 | ThreadPoolExecutor-3_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00003 @ Center_Delhi_1 on 2026-04-21 15:00
+2026-04-19 13:05:12,617 | ThreadPoolExecutor-3_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_5! I'm calling from AutoCare Service Center. We've detected your Honda CRV needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:05:12,618 | ThreadPoolExecutor-3_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-20 16:00
+2026-04-19 13:05:12,620 | ThreadPoolExecutor-3_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 7/10
+2026-04-19 13:05:12,620 | ThreadPoolExecutor-3_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_7! Your Maruti Swift is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:05:12,621 | ThreadPoolExecutor-3_5 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_8! Your Maruti Swift is due for Oil & Filter maintenance. I recommend booking within the next 1 days to avoid any issues. Are you available this week?
+2026-04-19 13:05:12,623 | ThreadPoolExecutor-3_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_9! I'm calling from AutoCare Service Center. We've detected your Hyundai Creta needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:05:12,625 | ThreadPoolExecutor-3_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00004 - Satisfaction: 9/10
+2026-04-19 13:05:12,629 | ThreadPoolExecutor-3_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-23 14:00
+2026-04-19 13:05:12,632 | ThreadPoolExecutor-3_5 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-22 14:00
+2026-04-19 13:05:12,633 | ThreadPoolExecutor-3_4 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00007 - Satisfaction: 8/10
+2026-04-19 13:05:12,634 | ThreadPoolExecutor-3_5 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00008 - Satisfaction: 7/10
+2026-04-19 13:05:12,635 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:05:12,636 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:05:12,636 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:05:12,637 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:05:12,637 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:05:12,637 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:05:12,637 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:05:12,638 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:05:12,638 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:05:12,638 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:05:12,638 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:05:12,639 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Maruti Swift_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 13:05:12,639 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.03s | Throughput: 300.18 vehicles/sec
+2026-04-19 13:05:12,648 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:09:58,496 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:09:58,500 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:09:58,500 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:09:58,501 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:09:58,501 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:09:58,501 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:09:58,504 | ThreadPoolExecutor-0_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_1! Our AI system detected that your Hyundai Creta will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:09:58,505 | ThreadPoolExecutor-0_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-20 09:00
+2026-04-19 13:09:58,506 | ThreadPoolExecutor-0_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_2! Our AI system detected that your Kia Seltos will benefit from Brake Pads service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:09:58,507 | ThreadPoolExecutor-0_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00001 - Satisfaction: 10/10
+2026-04-19 13:09:58,509 | ThreadPoolExecutor-0_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_4! Our AI system detected that your Maruti Swift will benefit from Oil & Filter service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:09:58,508 | ThreadPoolExecutor-0_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-23 15:00
+2026-04-19 13:09:58,510 | ThreadPoolExecutor-0_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_5! I'm calling from AutoCare Service Center. We've detected your Hyundai Creta needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:09:58,512 | ThreadPoolExecutor-0_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-20 09:00
+2026-04-19 13:09:58,514 | ThreadPoolExecutor-0_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_7! Our AI system detected that your Tata Nexon will benefit from Oil & Filter service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:09:58,517 | ThreadPoolExecutor-0_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 10/10
+2026-04-19 13:09:58,517 | ThreadPoolExecutor-0_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_8! Your Hyundai Creta is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:09:58,518 | ThreadPoolExecutor-0_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-20 15:00
+2026-04-19 13:09:58,519 | ThreadPoolExecutor-0_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_9! Our AI system detected that your Honda CRV will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:09:58,521 | ThreadPoolExecutor-0_5 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_10! I'm calling from AutoCare Service Center. We've detected your Kia Seltos needs Brake Pads service in about 1 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:09:58,522 | ThreadPoolExecutor-0_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-21 15:00
+2026-04-19 13:09:58,524 | ThreadPoolExecutor-0_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-23 15:00
+2026-04-19 13:09:58,525 | ThreadPoolExecutor-0_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 9/10
+2026-04-19 13:09:58,526 | ThreadPoolExecutor-0_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-23 16:00
+2026-04-19 13:09:58,527 | ThreadPoolExecutor-0_5 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-23 10:00
+2026-04-19 13:09:58,527 | ThreadPoolExecutor-0_4 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00007 - Satisfaction: 8/10
+2026-04-19 13:09:58,527 | ThreadPoolExecutor-0_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00008 - Satisfaction: 7/10
+2026-04-19 13:09:58,528 | ThreadPoolExecutor-0_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00009 - Satisfaction: 10/10
+2026-04-19 13:09:58,529 | ThreadPoolExecutor-0_5 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00010 - Satisfaction: 10/10
+2026-04-19 13:09:58,534 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:09:58,535 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:09:58,535 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:09:58,535 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:09:58,535 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:09:58,536 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:09:58,536 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:09:58,536 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:09:58,536 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:09:58,537 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:09:58,537 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:09:58,538 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Hyundai Creta_Battery - 3 vehicles affected - Cost saved: Rs.24000
+2026-04-19 13:09:58,538 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Kia Seltos_Brake Pads - 2 vehicles affected - Cost saved: Rs.6000
+2026-04-19 13:09:58,539 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Kia Seltos_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 13:09:58,539 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.04s | Throughput: 262.26 vehicles/sec
+2026-04-19 13:09:58,552 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:10:21,016 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:10:21,017 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:10:21,017 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:10:21,018 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:10:21,018 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:10:21,019 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:10:21,024 | ThreadPoolExecutor-1_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_2! Your Tata Nexon is due for Tires maintenance. I recommend booking within the next 30 days to avoid any issues. Are you available this week?
+2026-04-19 13:10:21,025 | ThreadPoolExecutor-1_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-21 16:00
+2026-04-19 13:10:21,025 | ThreadPoolExecutor-1_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_3! I'm calling from AutoCare Service Center. We've detected your Renault Duster needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:10:21,027 | ThreadPoolExecutor-1_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_4! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:10:21,026 | ThreadPoolExecutor-1_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 10/10
+2026-04-19 13:10:21,028 | ThreadPoolExecutor-1_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00003 @ Center_Delhi_1 on 2026-04-20 10:00
+2026-04-19 13:10:21,029 | ThreadPoolExecutor-1_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_5! Our AI system detected that your Kia Seltos will benefit from Oil & Filter service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:10:21,030 | ThreadPoolExecutor-1_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-22 09:00
+2026-04-19 13:10:21,030 | ThreadPoolExecutor-1_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_6! Our AI system detected that your Tata Nexon will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:10:21,032 | ThreadPoolExecutor-1_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_8! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:10:21,033 | ThreadPoolExecutor-1_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00003 - Satisfaction: 9/10
+2026-04-19 13:10:21,034 | ThreadPoolExecutor-1_5 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_9! Our AI system detected that your Renault Duster will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:10:21,036 | ThreadPoolExecutor-1_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-22 16:00
+2026-04-19 13:10:21,038 | ThreadPoolExecutor-1_5 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-20 16:00
+2026-04-19 13:10:21,038 | ThreadPoolExecutor-1_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00008 - Satisfaction: 7/10
+2026-04-19 13:10:21,039 | ThreadPoolExecutor-1_5 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00009 - Satisfaction: 8/10
+2026-04-19 13:10:21,042 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:10:21,043 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:21,043 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:21,043 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:21,044 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:21,044 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:21,044 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:21,044 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:21,045 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:21,045 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:21,045 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:21,046 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Renault Duster_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 13:10:21,047 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.03s | Throughput: 353.07 vehicles/sec
+2026-04-19 13:10:21,053 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:10:30,011 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:10:30,012 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:10:30,012 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:10:30,012 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:10:30,013 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:10:30,013 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:10:30,018 | ThreadPoolExecutor-2_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_5! I'm calling from AutoCare Service Center. We've detected your Honda CRV needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:10:30,018 | ThreadPoolExecutor-2_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_4! Our AI system detected that your Kia Seltos will benefit from Oil & Filter service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:10:30,023 | ThreadPoolExecutor-2_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_7! Our AI system detected that your Honda CRV will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:10:30,021 | ThreadPoolExecutor-2_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-23 10:00
+2026-04-19 13:10:30,023 | ThreadPoolExecutor-2_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_8! Our AI system detected that your Renault Duster will benefit from Oil & Filter service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:10:30,025 | ThreadPoolExecutor-2_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_9! Our AI system detected that your Renault Duster will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:10:30,025 | ThreadPoolExecutor-2_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-21 10:00
+2026-04-19 13:10:30,026 | ThreadPoolExecutor-2_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_10! Our AI system detected that your Maruti Swift will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:10:30,026 | ThreadPoolExecutor-2_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 7/10
+2026-04-19 13:10:30,027 | ThreadPoolExecutor-2_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-23 16:00
+2026-04-19 13:10:30,027 | ThreadPoolExecutor-2_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-20 09:00
+2026-04-19 13:10:30,028 | ThreadPoolExecutor-2_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00007 - Satisfaction: 8/10
+2026-04-19 13:10:30,028 | ThreadPoolExecutor-2_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-21 09:00
+2026-04-19 13:10:30,029 | ThreadPoolExecutor-2_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00008 - Satisfaction: 8/10
+2026-04-19 13:10:30,029 | ThreadPoolExecutor-2_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00009 - Satisfaction: 10/10
+2026-04-19 13:10:30,030 | ThreadPoolExecutor-2_4 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00010 - Satisfaction: 8/10
+2026-04-19 13:10:30,031 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:10:30,032 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:30,033 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:30,033 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:30,033 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:30,033 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:30,034 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:30,034 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:30,034 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:30,034 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:30,035 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:10:30,035 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Honda CRV_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 13:10:30,038 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Honda CRV_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 13:10:30,039 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.03s | Throughput: 382.21 vehicles/sec
+2026-04-19 13:10:30,045 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:12:30,430 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:12:30,436 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:12:30,437 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:12:30,437 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:12:30,438 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:12:30,438 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:12:30,444 | ThreadPoolExecutor-0_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_1! Your Honda CRV is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:12:30,447 | ThreadPoolExecutor-0_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-20 14:00
+2026-04-19 13:12:30,452 | ThreadPoolExecutor-0_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_2! I'm calling from AutoCare Service Center. We've detected your Honda CRV needs Transmission Fluid service in about 60 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:12:30,452 | ThreadPoolExecutor-0_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00001 - Satisfaction: 8/10
+2026-04-19 13:12:30,453 | ThreadPoolExecutor-0_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-23 09:00
+2026-04-19 13:12:30,457 | ThreadPoolExecutor-0_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_5! Our AI system detected that your Skoda Rapid will benefit from Transmission Fluid service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:12:30,457 | ThreadPoolExecutor-0_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_4! Your Honda CRV is due for Transmission Fluid maintenance. I recommend booking within the next 60 days to avoid any issues. Are you available this week?
+2026-04-19 13:12:30,460 | ThreadPoolExecutor-0_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-20 14:00
+2026-04-19 13:12:30,465 | ThreadPoolExecutor-0_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_9! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Brake Pads service in about 1 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:12:30,466 | ThreadPoolExecutor-0_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_10! Our AI system detected that your Skoda Rapid will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:12:30,467 | ThreadPoolExecutor-0_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-23 09:00
+2026-04-19 13:12:30,467 | ThreadPoolExecutor-0_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 7/10
+2026-04-19 13:12:30,468 | ThreadPoolExecutor-0_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00004 - Satisfaction: 9/10
+2026-04-19 13:12:30,469 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:12:30,471 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:30,471 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:30,472 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:30,472 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:30,473 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:30,473 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:30,473 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:30,474 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:30,474 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:30,474 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:30,475 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Honda CRV_Transmission Fluid - 2 vehicles affected - Cost saved: Rs.10000
+2026-04-19 13:12:30,475 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Skoda Rapid_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 13:12:30,476 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Skoda Rapid_Transmission Fluid - 2 vehicles affected - Cost saved: Rs.10000
+2026-04-19 13:12:30,477 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.04s | Throughput: 259.57 vehicles/sec
+2026-04-19 13:12:30,486 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:12:49,350 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:12:49,351 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:12:49,352 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:12:49,352 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:12:49,353 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:12:49,353 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:12:49,358 | ThreadPoolExecutor-1_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_1! I'm calling from AutoCare Service Center. We've detected your Honda CRV needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:12:49,359 | ThreadPoolExecutor-1_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_2! Our AI system detected that your Maruti Swift will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:12:49,361 | ThreadPoolExecutor-1_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_3! Your Hyundai Creta is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:12:49,361 | ThreadPoolExecutor-1_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-20 14:00
+2026-04-19 13:12:49,363 | ThreadPoolExecutor-1_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_4! I'm calling from AutoCare Service Center. We've detected your Kia Seltos needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:12:49,364 | ThreadPoolExecutor-1_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_5! Your Renault Duster is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:12:49,364 | ThreadPoolExecutor-1_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00003 @ Center_Delhi_1 on 2026-04-20 16:00
+2026-04-19 13:12:49,366 | ThreadPoolExecutor-1_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_6! I'm calling from AutoCare Service Center. We've detected your Tata Nexon needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:12:49,365 | ThreadPoolExecutor-1_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 7/10
+2026-04-19 13:12:49,366 | ThreadPoolExecutor-1_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-21 15:00
+2026-04-19 13:12:49,367 | ThreadPoolExecutor-1_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-21 15:00
+2026-04-19 13:12:49,368 | ThreadPoolExecutor-1_5 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_7! I'm calling from AutoCare Service Center. We've detected your Kia Seltos needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:12:49,368 | ThreadPoolExecutor-1_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00003 - Satisfaction: 7/10
+2026-04-19 13:12:49,370 | ThreadPoolExecutor-1_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_8! I'm calling from AutoCare Service Center. We've detected your Kia Seltos needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:12:49,371 | ThreadPoolExecutor-1_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_9! Our AI system detected that your Tata Nexon will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:12:49,374 | ThreadPoolExecutor-1_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_10! I'm calling from AutoCare Service Center. We've detected your Tata Nexon needs Brake Pads service in about 1 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:12:49,375 | ThreadPoolExecutor-1_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 7/10
+2026-04-19 13:12:49,375 | ThreadPoolExecutor-1_5 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-21 14:00
+2026-04-19 13:12:49,379 | ThreadPoolExecutor-1_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-23 15:00
+2026-04-19 13:12:49,381 | ThreadPoolExecutor-1_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-21 14:00
+2026-04-19 13:12:49,382 | ThreadPoolExecutor-1_5 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00007 - Satisfaction: 8/10
+2026-04-19 13:12:49,383 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:12:49,384 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:49,385 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:49,385 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:49,386 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:49,386 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:49,386 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:49,387 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:49,387 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:49,387 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:49,387 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:12:49,388 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Tata Nexon_Battery - 3 vehicles affected - Cost saved: Rs.24000
+2026-04-19 13:12:49,394 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Tata Nexon_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 13:12:49,394 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Kia Seltos_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 13:12:49,395 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Kia Seltos_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 13:12:49,395 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.04s | Throughput: 239.53 vehicles/sec
+2026-04-19 13:12:49,403 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:13:24,169 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:13:24,170 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:13:24,170 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:13:24,171 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:13:24,171 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:13:24,172 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:13:24,174 | ThreadPoolExecutor-2_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_1! I'm calling from AutoCare Service Center. We've detected your Kia Seltos needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:13:24,176 | ThreadPoolExecutor-2_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-23 16:00
+2026-04-19 13:13:24,179 | ThreadPoolExecutor-2_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_2! I'm calling from AutoCare Service Center. We've detected your Renault Duster needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:13:24,180 | ThreadPoolExecutor-2_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_3! Your Maruti Swift is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:13:24,181 | ThreadPoolExecutor-2_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_5! Your Skoda Rapid is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:13:24,185 | ThreadPoolExecutor-2_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_7! Our AI system detected that your Mahindra XUV will benefit from Transmission Fluid service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:13:24,186 | ThreadPoolExecutor-2_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-22 10:00
+2026-04-19 13:13:24,183 | ThreadPoolExecutor-2_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00003 @ Center_Delhi_1 on 2026-04-22 15:00
+2026-04-19 13:13:24,186 | ThreadPoolExecutor-2_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_10! I'm calling from AutoCare Service Center. We've detected your Honda CRV needs Oil & Filter service in about 1 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:13:24,187 | ThreadPoolExecutor-2_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 8/10
+2026-04-19 13:13:24,187 | ThreadPoolExecutor-2_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_9! Your Maruti Swift is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:13:24,188 | ThreadPoolExecutor-2_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00003 - Satisfaction: 10/10
+2026-04-19 13:13:24,190 | ThreadPoolExecutor-2_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-20 14:00
+2026-04-19 13:13:24,191 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:13:24,192 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:13:24,192 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:13:24,193 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:13:24,193 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:13:24,193 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:13:24,194 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:13:24,194 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:13:24,197 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:13:24,197 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:13:24,197 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:13:24,198 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Maruti Swift_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 13:13:24,198 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.03s | Throughput: 373.48 vehicles/sec
+2026-04-19 13:13:24,204 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:14:12,803 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:14:12,804 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:14:12,804 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:14:12,805 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:14:12,806 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:14:12,806 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:14:12,809 | ThreadPoolExecutor-3_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_1! Our AI system detected that your Maruti Swift will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:14:12,810 | ThreadPoolExecutor-3_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-21 16:00
+2026-04-19 13:14:12,815 | ThreadPoolExecutor-3_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_4! Our AI system detected that your Tata Nexon will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:14:12,814 | ThreadPoolExecutor-3_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_3! Our AI system detected that your Maruti Swift will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:14:12,815 | ThreadPoolExecutor-3_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00001 - Satisfaction: 8/10
+2026-04-19 13:14:12,817 | ThreadPoolExecutor-3_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_8! Our AI system detected that your Kia Seltos will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:14:12,818 | ThreadPoolExecutor-3_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_6! Your Mahindra XUV is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:14:12,818 | ThreadPoolExecutor-3_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_7! Our AI system detected that your Maruti Swift will benefit from Brake Pads service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:14:12,821 | ThreadPoolExecutor-3_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_9! I'm calling from AutoCare Service Center. We've detected your Hyundai Creta needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:14:12,822 | ThreadPoolExecutor-3_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-21 16:00
+2026-04-19 13:14:12,823 | ThreadPoolExecutor-3_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00006 @ Center_Delhi_1 on 2026-04-22 09:00
+2026-04-19 13:14:12,824 | ThreadPoolExecutor-3_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-22 15:00
+2026-04-19 13:14:12,825 | ThreadPoolExecutor-3_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00006 - Satisfaction: 7/10
+2026-04-19 13:14:12,825 | ThreadPoolExecutor-3_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00007 - Satisfaction: 10/10
+2026-04-19 13:14:12,827 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:14:12,830 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:14:12,831 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:14:12,831 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:14:12,832 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:14:12,832 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:14:12,833 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:14:12,833 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:14:12,833 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:14:12,834 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:14:12,835 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:14:12,835 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Maruti Swift_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 13:14:12,836 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Maruti Swift_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 13:14:12,836 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.03s | Throughput: 334.32 vehicles/sec
+2026-04-19 13:14:12,841 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 13:15:34,209 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 13:15:34,210 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 13:15:34,211 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 13:15:34,212 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 13:15:34,213 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 13:15:34,213 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 13:15:34,215 | ThreadPoolExecutor-4_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_1! Your Tata Nexon is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:15:34,220 | ThreadPoolExecutor-4_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-21 16:00
+2026-04-19 13:15:34,222 | ThreadPoolExecutor-4_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_3! Our AI system detected that your Skoda Rapid will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 13:15:34,222 | ThreadPoolExecutor-4_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00001 - Satisfaction: 10/10
+2026-04-19 13:15:34,222 | ThreadPoolExecutor-4_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00003 @ Center_Delhi_1 on 2026-04-20 10:00
+2026-04-19 13:15:34,224 | ThreadPoolExecutor-4_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_5! I'm calling from AutoCare Service Center. We've detected your Kia Seltos needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:15:34,225 | ThreadPoolExecutor-4_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_10! I'm calling from AutoCare Service Center. We've detected your Maruti Swift needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:15:34,225 | ThreadPoolExecutor-4_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_8! Your Hyundai Creta is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 13:15:34,226 | ThreadPoolExecutor-4_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_9! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 13:15:34,227 | ThreadPoolExecutor-4_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-20 09:00
+2026-04-19 13:15:34,228 | ThreadPoolExecutor-4_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-22 14:00
+2026-04-19 13:15:34,229 | ThreadPoolExecutor-4_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 7/10
+2026-04-19 13:15:34,229 | ThreadPoolExecutor-4_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00009 - Satisfaction: 9/10
+2026-04-19 13:15:34,230 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 13:15:34,232 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:15:34,232 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:15:34,232 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:15:34,233 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:15:34,233 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:15:34,234 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:15:34,235 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:15:34,235 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:15:34,236 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:15:34,236 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 13:15:34,237 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.02s | Throughput: 422.87 vehicles/sec
+2026-04-19 13:15:34,242 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 14:13:20,630 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 14:13:20,654 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 14:13:20,654 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 14:13:20,657 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 14:13:20,658 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 14:13:20,658 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 14:13:20,824 | ThreadPoolExecutor-5_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_2! I'm calling from AutoCare Service Center. We've detected your Mahindra XUV needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:13:20,825 | ThreadPoolExecutor-5_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_1! Your Kia Seltos is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 14:13:20,836 | ThreadPoolExecutor-5_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_3! I'm calling from AutoCare Service Center. We've detected your Kia Seltos needs Oil & Filter service in about 1 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:13:20,836 | ThreadPoolExecutor-5_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-22 14:00
+2026-04-19 14:13:20,838 | ThreadPoolExecutor-5_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-20 09:00
+2026-04-19 14:13:20,840 | ThreadPoolExecutor-5_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_4! Our AI system detected that your Tata Nexon will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:13:20,840 | ThreadPoolExecutor-5_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00003 @ Center_Delhi_1 on 2026-04-22 10:00
+2026-04-19 14:13:20,841 | ThreadPoolExecutor-5_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 9/10
+2026-04-19 14:13:20,842 | ThreadPoolExecutor-5_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_5! Your Maruti Swift is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 14:13:20,844 | ThreadPoolExecutor-5_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00001 - Satisfaction: 7/10
+2026-04-19 14:13:20,848 | ThreadPoolExecutor-5_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-22 10:00
+2026-04-19 14:13:20,851 | ThreadPoolExecutor-5_5 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_7! Our AI system detected that your Maruti Swift will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:13:20,851 | ThreadPoolExecutor-5_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00003 - Satisfaction: 8/10
+2026-04-19 14:13:20,854 | ThreadPoolExecutor-5_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_8! Your Tata Nexon is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 14:13:20,855 | ThreadPoolExecutor-5_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-20 10:00
+2026-04-19 14:13:20,857 | ThreadPoolExecutor-5_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_10! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:13:20,858 | ThreadPoolExecutor-5_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00004 - Satisfaction: 10/10
+2026-04-19 14:13:20,860 | ThreadPoolExecutor-5_5 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-22 15:00
+2026-04-19 14:13:20,862 | ThreadPoolExecutor-5_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-20 15:00
+2026-04-19 14:13:20,867 | ThreadPoolExecutor-5_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00010 - Satisfaction: 8/10
+2026-04-19 14:13:20,869 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 14:13:20,875 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:13:20,876 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:13:20,876 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:13:20,876 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:13:20,877 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:13:20,877 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:13:20,877 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:13:20,877 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:13:20,878 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:13:20,878 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:13:20,879 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Tata Nexon_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 14:13:20,880 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Maruti Swift_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 14:13:20,881 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.22s | Throughput: 44.98 vehicles/sec
+2026-04-19 14:13:20,926 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 14:17:32,809 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 14:17:32,821 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 14:17:32,822 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 14:17:32,833 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 14:17:32,834 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 14:17:32,835 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 14:17:32,914 | ThreadPoolExecutor-6_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_2! Our AI system detected that your Kia Seltos will benefit from Brake Pads service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:17:32,927 | ThreadPoolExecutor-6_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_3! Our AI system detected that your Maruti Swift will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:17:32,931 | ThreadPoolExecutor-6_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-23 15:00
+2026-04-19 14:17:32,934 | ThreadPoolExecutor-6_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_4! Our AI system detected that your Maruti Swift will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:17:32,940 | ThreadPoolExecutor-6_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_9! Your Mahindra XUV is due for Tires maintenance. I recommend booking within the next 30 days to avoid any issues. Are you available this week?
+2026-04-19 14:17:32,941 | ThreadPoolExecutor-6_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_7! I'm calling from AutoCare Service Center. We've detected your Maruti Swift needs Oil & Filter service in about 1 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:17:32,944 | ThreadPoolExecutor-6_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-20 09:00
+2026-04-19 14:17:32,946 | ThreadPoolExecutor-6_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_10! Our AI system detected that your Maruti Swift will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:17:32,957 | ThreadPoolExecutor-6_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-21 16:00
+2026-04-19 14:17:32,958 | ThreadPoolExecutor-6_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00007 - Satisfaction: 8/10
+2026-04-19 14:17:32,957 | ThreadPoolExecutor-6_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00004 - Satisfaction: 9/10
+2026-04-19 14:17:32,960 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 14:17:32,970 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:17:32,971 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:17:32,971 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:17:32,972 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:17:32,972 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:17:32,973 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:17:32,973 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:17:32,973 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:17:32,974 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:17:32,974 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:17:32,976 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Maruti Swift_Tires - 3 vehicles affected - Cost saved: Rs.45000
+2026-04-19 14:17:32,987 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Maruti Swift_Battery - 3 vehicles affected - Cost saved: Rs.24000
+2026-04-19 14:17:32,991 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.16s | Throughput: 64.1 vehicles/sec
+2026-04-19 14:17:33,038 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 14:36:02,452 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 14:36:02,466 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 14:36:02,467 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 14:36:02,471 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 14:36:02,474 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 14:36:02,477 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 14:36:02,526 | ThreadPoolExecutor-7_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_1! Our AI system detected that your Tata Nexon will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:36:02,528 | ThreadPoolExecutor-7_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_2! Your Renault Duster is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 14:36:02,533 | ThreadPoolExecutor-7_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_3! Our AI system detected that your Hyundai Creta will benefit from Oil & Filter service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:36:02,537 | ThreadPoolExecutor-7_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-22 10:00
+2026-04-19 14:36:02,538 | ThreadPoolExecutor-7_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_4! Our AI system detected that your Honda CRV will benefit from Brake Pads service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:36:02,540 | ThreadPoolExecutor-7_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_5! I'm calling from AutoCare Service Center. We've detected your Hyundai Creta needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:36:02,542 | ThreadPoolExecutor-7_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00003 @ Center_Delhi_1 on 2026-04-22 10:00
+2026-04-19 14:36:02,545 | ThreadPoolExecutor-7_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_6! Your Hyundai Creta is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 14:36:02,546 | ThreadPoolExecutor-7_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 7/10
+2026-04-19 14:36:02,549 | ThreadPoolExecutor-7_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-23 10:00
+2026-04-19 14:36:02,552 | ThreadPoolExecutor-7_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-21 14:00
+2026-04-19 14:36:02,556 | ThreadPoolExecutor-7_5 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_10! Your Mahindra XUV is due for Transmission Fluid maintenance. I recommend booking within the next 60 days to avoid any issues. Are you available this week?
+2026-04-19 14:36:02,558 | ThreadPoolExecutor-7_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00003 - Satisfaction: 7/10
+2026-04-19 14:36:02,560 | ThreadPoolExecutor-7_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00004 - Satisfaction: 7/10
+2026-04-19 14:36:02,561 | ThreadPoolExecutor-7_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 9/10
+2026-04-19 14:36:02,566 | ThreadPoolExecutor-7_5 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-22 16:00
+2026-04-19 14:36:02,569 | ThreadPoolExecutor-7_5 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00010 - Satisfaction: 8/10
+2026-04-19 14:36:02,570 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 14:36:02,576 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:02,577 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:02,577 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:02,578 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:02,578 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:02,579 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:02,579 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:02,579 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:02,580 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:02,580 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:02,581 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Hyundai Creta_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 14:36:02,581 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.10s | Throughput: 95.78 vehicles/sec
+2026-04-19 14:36:02,602 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 14:36:44,745 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 14:36:44,748 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 14:36:44,751 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 14:36:44,752 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 14:36:44,753 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 14:36:44,753 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 14:36:44,756 | ThreadPoolExecutor-8_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_1! I'm calling from AutoCare Service Center. We've detected your Hyundai Creta needs Transmission Fluid service in about 60 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:36:44,762 | ThreadPoolExecutor-8_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_2! Our AI system detected that your Maruti Swift will benefit from Transmission Fluid service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:36:44,767 | ThreadPoolExecutor-8_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-20 10:00
+2026-04-19 14:36:44,768 | ThreadPoolExecutor-8_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_3! I'm calling from AutoCare Service Center. We've detected your Tata Nexon needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:36:44,764 | ThreadPoolExecutor-8_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-21 15:00
+2026-04-19 14:36:44,770 | ThreadPoolExecutor-8_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 10/10
+2026-04-19 14:36:44,771 | ThreadPoolExecutor-8_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_4! Your Mahindra XUV is due for Brake Pads maintenance. I recommend booking within the next 1 days to avoid any issues. Are you available this week?
+2026-04-19 14:36:44,773 | ThreadPoolExecutor-8_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_5! Your Mahindra XUV is due for Tires maintenance. I recommend booking within the next 30 days to avoid any issues. Are you available this week?
+2026-04-19 14:36:44,774 | ThreadPoolExecutor-8_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00001 - Satisfaction: 7/10
+2026-04-19 14:36:44,782 | ThreadPoolExecutor-8_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_6! Your Skoda Rapid is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 14:36:44,784 | ThreadPoolExecutor-8_5 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_9! Our AI system detected that your Kia Seltos will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:36:44,786 | ThreadPoolExecutor-8_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_8! Your Renault Duster is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 14:36:44,787 | ThreadPoolExecutor-8_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-20 14:00
+2026-04-19 14:36:44,789 | ThreadPoolExecutor-8_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-23 10:00
+2026-04-19 14:36:44,796 | ThreadPoolExecutor-8_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00006 @ Center_Delhi_1 on 2026-04-23 15:00
+2026-04-19 14:36:44,800 | ThreadPoolExecutor-8_5 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-21 10:00
+2026-04-19 14:36:44,801 | ThreadPoolExecutor-8_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-20 15:00
+2026-04-19 14:36:44,803 | ThreadPoolExecutor-8_4 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00006 - Satisfaction: 10/10
+2026-04-19 14:36:44,804 | ThreadPoolExecutor-8_5 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00009 - Satisfaction: 8/10
+2026-04-19 14:36:44,804 | ThreadPoolExecutor-8_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00008 - Satisfaction: 8/10
+2026-04-19 14:36:44,806 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 14:36:44,808 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:44,811 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:44,812 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:44,812 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:44,813 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:44,814 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:44,816 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:44,817 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:44,817 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:44,818 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:36:44,819 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.07s | Throughput: 151.95 vehicles/sec
+2026-04-19 14:36:44,834 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 14:40:47,378 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 14:40:47,387 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 14:40:47,389 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 14:40:47,390 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 14:40:47,391 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 14:40:47,392 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 14:40:47,413 | ThreadPoolExecutor-9_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_3! Your Tata Nexon is due for Brake Pads maintenance. I recommend booking within the next 1 days to avoid any issues. Are you available this week?
+2026-04-19 14:40:47,417 | ThreadPoolExecutor-9_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_5! Our AI system detected that your Maruti Swift will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:40:47,416 | ThreadPoolExecutor-9_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_4! Our AI system detected that your Kia Seltos will benefit from Transmission Fluid service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:40:47,419 | ThreadPoolExecutor-9_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00003 @ Center_Delhi_1 on 2026-04-22 15:00
+2026-04-19 14:40:47,423 | ThreadPoolExecutor-9_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_6! Your Hyundai Creta is due for Tires maintenance. I recommend booking within the next 30 days to avoid any issues. Are you available this week?
+2026-04-19 14:40:47,425 | ThreadPoolExecutor-9_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-22 10:00
+2026-04-19 14:40:47,426 | ThreadPoolExecutor-9_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_7! Our AI system detected that your Hyundai Creta will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:40:47,432 | ThreadPoolExecutor-9_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_8! Our AI system detected that your Honda CRV will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:40:47,433 | ThreadPoolExecutor-9_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00003 - Satisfaction: 7/10
+2026-04-19 14:40:47,436 | ThreadPoolExecutor-9_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00006 @ Center_Delhi_1 on 2026-04-21 15:00
+2026-04-19 14:40:47,437 | ThreadPoolExecutor-9_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00004 - Satisfaction: 9/10
+2026-04-19 14:40:47,438 | ThreadPoolExecutor-9_5 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_10! Your Tata Nexon is due for Transmission Fluid maintenance. I recommend booking within the next 60 days to avoid any issues. Are you available this week?
+2026-04-19 14:40:47,441 | ThreadPoolExecutor-9_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-21 15:00
+2026-04-19 14:40:47,452 | ThreadPoolExecutor-9_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-22 09:00
+2026-04-19 14:40:47,464 | ThreadPoolExecutor-9_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00006 - Satisfaction: 9/10
+2026-04-19 14:40:47,471 | ThreadPoolExecutor-9_5 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-20 09:00
+2026-04-19 14:40:47,475 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 14:40:47,482 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:40:47,484 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:40:47,485 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:40:47,487 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:40:47,487 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:40:47,488 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:40:47,488 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:40:47,489 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:40:47,489 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:40:47,490 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:40:47,493 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Hyundai Creta_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 14:40:47,496 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.10s | Throughput: 96.27 vehicles/sec
+2026-04-19 14:40:47,515 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 14:42:14,216 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 14:42:14,219 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 14:42:14,219 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 14:42:14,220 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 14:42:14,221 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 14:42:14,223 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 14:42:14,232 | ThreadPoolExecutor-10_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_1! I'm calling from AutoCare Service Center. We've detected your Renault Duster needs Transmission Fluid service in about 60 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:42:14,235 | ThreadPoolExecutor-10_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_2! Our AI system detected that your Hyundai Creta will benefit from Brake Pads service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:42:14,238 | ThreadPoolExecutor-10_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_4! I'm calling from AutoCare Service Center. We've detected your Tata Nexon needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:42:14,243 | ThreadPoolExecutor-10_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-20 15:00
+2026-04-19 14:42:14,245 | ThreadPoolExecutor-10_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_5! Your Mahindra XUV is due for Tires maintenance. I recommend booking within the next 30 days to avoid any issues. Are you available this week?
+2026-04-19 14:42:14,252 | ThreadPoolExecutor-10_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_6! Our AI system detected that your Hyundai Creta will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:42:14,254 | ThreadPoolExecutor-10_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-22 09:00
+2026-04-19 14:42:14,255 | ThreadPoolExecutor-10_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 8/10
+2026-04-19 14:42:14,257 | ThreadPoolExecutor-10_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00004 - Satisfaction: 9/10
+2026-04-19 14:42:14,258 | ThreadPoolExecutor-10_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_10! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:42:14,259 | ThreadPoolExecutor-10_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_9! I'm calling from AutoCare Service Center. We've detected your Mahindra XUV needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:42:14,261 | ThreadPoolExecutor-10_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-21 09:00
+2026-04-19 14:42:14,264 | ThreadPoolExecutor-10_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00010 - Satisfaction: 10/10
+2026-04-19 14:42:14,263 | ThreadPoolExecutor-10_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-23 09:00
+2026-04-19 14:42:14,270 | ThreadPoolExecutor-10_4 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00009 - Satisfaction: 7/10
+2026-04-19 14:42:14,271 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 14:42:14,273 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:14,274 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:14,275 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:14,275 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:14,276 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:14,276 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:14,277 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:14,277 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:14,278 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:14,278 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:14,278 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Hyundai Creta_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 14:42:14,285 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.06s | Throughput: 160.18 vehicles/sec
+2026-04-19 14:42:14,306 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 14:42:45,459 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 14:42:45,460 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 14:42:45,461 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 14:42:45,462 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 14:42:45,463 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 14:42:45,464 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 14:42:45,482 | ThreadPoolExecutor-11_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_1! Your Maruti Swift is due for Transmission Fluid maintenance. I recommend booking within the next 60 days to avoid any issues. Are you available this week?
+2026-04-19 14:42:45,490 | ThreadPoolExecutor-11_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_3! I'm calling from AutoCare Service Center. We've detected your Maruti Swift needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:42:45,495 | ThreadPoolExecutor-11_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_7! Our AI system detected that your Mahindra XUV will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:42:45,496 | ThreadPoolExecutor-11_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_5! Our AI system detected that your Maruti Swift will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:42:45,500 | ThreadPoolExecutor-11_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_8! Our AI system detected that your Tata Nexon will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:42:45,508 | ThreadPoolExecutor-11_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_10! Our AI system detected that your Tata Nexon will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:42:45,509 | ThreadPoolExecutor-11_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-22 09:00
+2026-04-19 14:42:45,511 | ThreadPoolExecutor-11_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-23 14:00
+2026-04-19 14:42:45,512 | ThreadPoolExecutor-11_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-23 14:00
+2026-04-19 14:42:45,512 | ThreadPoolExecutor-11_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 8/10
+2026-04-19 14:42:45,514 | ThreadPoolExecutor-11_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00010 - Satisfaction: 7/10
+2026-04-19 14:42:45,516 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 14:42:45,517 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:45,518 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:45,518 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:45,519 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:45,522 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:45,523 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:45,524 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:45,524 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:45,524 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:45,525 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:42:45,526 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Maruti Swift_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 14:42:45,527 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Maruti Swift_Transmission Fluid - 2 vehicles affected - Cost saved: Rs.10000
+2026-04-19 14:42:45,527 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Tata Nexon_Battery - 2 vehicles affected - Cost saved: Rs.16000
+2026-04-19 14:42:45,528 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.06s | Throughput: 155.49 vehicles/sec
+2026-04-19 14:42:45,548 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 14:44:04,204 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 14:44:04,205 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 14:44:04,206 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 14:44:04,207 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 14:44:04,208 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 14:44:04,210 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 14:44:04,215 | ThreadPoolExecutor-12_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_1! I'm calling from AutoCare Service Center. We've detected your Honda CRV needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:44:04,217 | ThreadPoolExecutor-12_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-21 14:00
+2026-04-19 14:44:04,218 | ThreadPoolExecutor-12_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_2! Your Renault Duster is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 14:44:04,219 | ThreadPoolExecutor-12_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00001 - Satisfaction: 8/10
+2026-04-19 14:44:04,223 | ThreadPoolExecutor-12_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_4! Your Renault Duster is due for Brake Pads maintenance. I recommend booking within the next 1 days to avoid any issues. Are you available this week?
+2026-04-19 14:44:04,224 | ThreadPoolExecutor-12_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_5! Our AI system detected that your Skoda Rapid will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:44:04,236 | ThreadPoolExecutor-12_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-21 15:00
+2026-04-19 14:44:04,240 | ThreadPoolExecutor-12_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_8! I'm calling from AutoCare Service Center. We've detected your Skoda Rapid needs Oil & Filter service in about 1 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:44:04,241 | ThreadPoolExecutor-12_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_7! Our AI system detected that your Mahindra XUV will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:44:04,253 | ThreadPoolExecutor-12_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-21 14:00
+2026-04-19 14:44:04,255 | ThreadPoolExecutor-12_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00004 - Satisfaction: 9/10
+2026-04-19 14:44:04,258 | ThreadPoolExecutor-12_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-20 15:00
+2026-04-19 14:44:04,259 | ThreadPoolExecutor-12_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-23 14:00
+2026-04-19 14:44:04,262 | ThreadPoolExecutor-12_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 10/10
+2026-04-19 14:44:04,263 | ThreadPoolExecutor-12_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00008 - Satisfaction: 10/10
+2026-04-19 14:44:04,266 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 14:44:04,268 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:44:04,268 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:44:04,269 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:44:04,270 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:44:04,270 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:44:04,271 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:44:04,271 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:44:04,272 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:44:04,273 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:44:04,273 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:44:04,274 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Skoda Rapid_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 14:44:04,275 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.07s | Throughput: 152.99 vehicles/sec
+2026-04-19 14:44:04,286 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 14:46:59,042 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 14:46:59,044 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 14:46:59,046 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 14:46:59,046 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 14:46:59,047 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 14:46:59,047 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 14:46:59,051 | ThreadPoolExecutor-13_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_1! Your Kia Seltos is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 14:46:59,058 | ThreadPoolExecutor-13_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00001 @ Center_Delhi_1 on 2026-04-20 10:00
+2026-04-19 14:46:59,059 | ThreadPoolExecutor-13_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_2! Our AI system detected that your Maruti Swift will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:46:59,061 | ThreadPoolExecutor-13_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-21 16:00
+2026-04-19 14:46:59,066 | ThreadPoolExecutor-13_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 9/10
+2026-04-19 14:46:59,063 | ThreadPoolExecutor-13_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_6! I'm calling from AutoCare Service Center. We've detected your Honda CRV needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:46:59,072 | ThreadPoolExecutor-13_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_9! Your Honda CRV is due for Tires maintenance. I recommend booking within the next 30 days to avoid any issues. Are you available this week?
+2026-04-19 14:46:59,067 | ThreadPoolExecutor-13_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_7! Your Mahindra XUV is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 14:46:59,076 | ThreadPoolExecutor-13_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00006 @ Center_Delhi_1 on 2026-04-22 15:00
+2026-04-19 14:46:59,084 | ThreadPoolExecutor-13_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00006 - Satisfaction: 9/10
+2026-04-19 14:46:59,083 | ThreadPoolExecutor-13_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00007 @ Center_Delhi_1 on 2026-04-22 09:00
+2026-04-19 14:46:59,086 | ThreadPoolExecutor-13_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00007 - Satisfaction: 8/10
+2026-04-19 14:46:59,089 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 14:46:59,092 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:46:59,093 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:46:59,094 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:46:59,094 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:46:59,095 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:46:59,095 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:46:59,095 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:46:59,096 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:46:59,096 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:46:59,096 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:46:59,097 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Honda CRV_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 14:46:59,097 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.05s | Throughput: 200.53 vehicles/sec
+2026-04-19 14:46:59,110 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 14:47:09,711 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 14:47:09,712 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 14:47:09,714 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 14:47:09,716 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 14:47:09,717 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 14:47:09,718 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 14:47:09,722 | ThreadPoolExecutor-14_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_2! Our AI system detected that your Skoda Rapid will benefit from Brake Pads service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:47:09,723 | ThreadPoolExecutor-14_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_3! I'm calling from AutoCare Service Center. We've detected your Honda CRV needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:47:09,727 | ThreadPoolExecutor-14_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_4! Our AI system detected that your Maruti Swift will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:47:09,725 | ThreadPoolExecutor-14_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-20 15:00
+2026-04-19 14:47:09,729 | ThreadPoolExecutor-14_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00003 @ Center_Delhi_1 on 2026-04-20 16:00
+2026-04-19 14:47:09,733 | ThreadPoolExecutor-14_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00004 @ Center_Delhi_1 on 2026-04-23 16:00
+2026-04-19 14:47:09,738 | ThreadPoolExecutor-14_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_6! I'm calling from AutoCare Service Center. We've detected your Maruti Swift needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:47:09,741 | ThreadPoolExecutor-14_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00003 - Satisfaction: 7/10
+2026-04-19 14:47:09,742 | ThreadPoolExecutor-14_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_8! I'm calling from AutoCare Service Center. We've detected your Maruti Swift needs Tires service in about 30 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:47:09,743 | ThreadPoolExecutor-14_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_9! Our AI system detected that your Skoda Rapid will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:47:09,750 | ThreadPoolExecutor-14_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_10! Your Honda CRV is due for Transmission Fluid maintenance. I recommend booking within the next 60 days to avoid any issues. Are you available this week?
+2026-04-19 14:47:09,754 | ThreadPoolExecutor-14_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00006 @ Center_Delhi_1 on 2026-04-22 10:00
+2026-04-19 14:47:09,757 | ThreadPoolExecutor-14_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00008 @ Center_Delhi_1 on 2026-04-22 14:00
+2026-04-19 14:47:09,761 | ThreadPoolExecutor-14_4 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-20 09:00
+2026-04-19 14:47:09,767 | ThreadPoolExecutor-14_2 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00010 @ Center_Delhi_1 on 2026-04-21 15:00
+2026-04-19 14:47:09,768 | ThreadPoolExecutor-14_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00006 - Satisfaction: 7/10
+2026-04-19 14:47:09,771 | ThreadPoolExecutor-14_4 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00009 - Satisfaction: 7/10
+2026-04-19 14:47:09,774 | ThreadPoolExecutor-14_2 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00010 - Satisfaction: 7/10
+2026-04-19 14:47:09,776 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 14:47:09,778 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:09,779 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:09,780 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:09,782 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:09,784 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:09,785 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:09,786 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:09,786 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:09,787 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:09,788 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:09,789 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Maruti Swift_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 14:47:09,790 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.07s | Throughput: 138.76 vehicles/sec
+2026-04-19 14:47:09,806 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json
+2026-04-19 14:47:49,213 | MainThread   | main                 | INFO     | Generating synthetic vehicle fleet data...
+2026-04-19 14:47:49,215 | MainThread   | main                 | INFO     | Generated 10 vehicles
+2026-04-19 14:47:49,216 | MainThread   | main                 | INFO     | Initializing Master Agent with 6 Worker Agents...
+2026-04-19 14:47:49,220 | MainThread   | MasterAgent          | INFO     | MASTER AGENT INITIALIZED | Max Workers: 6 | Fleet Size: 10
+2026-04-19 14:47:49,221 | MainThread   | main                 | INFO     | Starting orchestration cycle...
+2026-04-19 14:47:49,222 | MainThread   | MasterAgent          | INFO     | MASTER AGENT: Starting maintenance orchestration cycle | Vehicles: 10
+2026-04-19 14:47:49,227 | ThreadPoolExecutor-15_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_2! I'm calling from AutoCare Service Center. We've detected your Tata Nexon needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:47:49,228 | ThreadPoolExecutor-15_1 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_3! Your Renault Duster is due for Tires maintenance. I recommend booking within the next 30 days to avoid any issues. Are you available this week?
+2026-04-19 14:47:49,231 | ThreadPoolExecutor-15_0 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00002 @ Center_Delhi_1 on 2026-04-21 15:00
+2026-04-19 14:47:49,232 | ThreadPoolExecutor-15_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hi Owner_4! I'm calling from AutoCare Service Center. We've detected your Mahindra XUV needs Battery service in about 45 days. Your safety is our priority. Can we schedule an appointment?
+2026-04-19 14:47:49,237 | ThreadPoolExecutor-15_1 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00003 @ Center_Delhi_1 on 2026-04-23 14:00
+2026-04-19 14:47:49,237 | ThreadPoolExecutor-15_0 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00002 - Satisfaction: 10/10
+2026-04-19 14:47:49,239 | ThreadPoolExecutor-15_3 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_5! Our AI system detected that your Honda CRV will benefit from Tires service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:47:49,241 | ThreadPoolExecutor-15_2 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_6! Your Kia Seltos is due for Tires maintenance. I recommend booking within the next 30 days to avoid any issues. Are you available this week?
+2026-04-19 14:47:49,242 | ThreadPoolExecutor-15_1 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00003 - Satisfaction: 8/10
+2026-04-19 14:47:49,245 | ThreadPoolExecutor-15_4 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_8! Our AI system detected that your Renault Duster will benefit from Battery service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:47:49,253 | ThreadPoolExecutor-15_3 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00005 @ Center_Delhi_1 on 2026-04-23 10:00
+2026-04-19 14:47:49,257 | ThreadPoolExecutor-15_5 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Good day Owner_9! Our AI system detected that your Maruti Swift will benefit from Brake Pads service soon. We have flexible slots available. When would suit you best?
+2026-04-19 14:47:49,258 | ThreadPoolExecutor-15_0 | Agent:CustomerEngagementAgent | INFO     | VOICE ENGAGEMENT: Hello Owner_10! Your Honda CRV is due for Battery maintenance. I recommend booking within the next 45 days to avoid any issues. Are you available this week?
+2026-04-19 14:47:49,261 | ThreadPoolExecutor-15_3 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00005 - Satisfaction: 7/10
+2026-04-19 14:47:49,262 | ThreadPoolExecutor-15_5 | Agent:SchedulingAgent | INFO     | APPOINTMENT: VEH_DEL_00009 @ Center_Delhi_1 on 2026-04-23 16:00
+2026-04-19 14:47:49,264 | ThreadPoolExecutor-15_5 | Agent:FeedbackAgent  | INFO     | FEEDBACK: VEH_DEL_00009 - Satisfaction: 8/10
+2026-04-19 14:47:49,265 | MainThread   | MasterAgent          | INFO     | Processed 10/10 vehicles
+2026-04-19 14:47:49,272 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:49,273 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:49,274 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:49,274 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:49,275 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:49,276 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:49,276 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:49,277 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:49,277 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:49,278 | MainThread   | UEBAMonitor          | WARNING  | SECURITY ALERT: CustomerEngagementAgent - Sensitive data access by CustomerEngagementAgent (Score: 0.90)
+2026-04-19 14:47:49,279 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Renault Duster_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 14:47:49,279 | MainThread   | Agent:ManufacturingQualityAgent | INFO     | RCA INSIGHT: Honda CRV_Tires - 2 vehicles affected - Cost saved: Rs.30000
+2026-04-19 14:47:49,280 | MainThread   | MasterAgent          | INFO     | ORCHESTRATION COMPLETE | Time: 0.06s | Throughput: 172.42 vehicles/sec
+2026-04-19 14:47:49,296 | MainThread   | main                 | INFO     | Results saved to maintenance_system_results.json

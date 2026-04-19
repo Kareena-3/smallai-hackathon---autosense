@@ -1,41 +1,58 @@
 {
   "metadata": {
-    "cycle_id": "CYCLE_20260419022740",
-    "start_time": "2026-04-19T02:27:40.272258",
+    "cycle_id": "CYCLE_20260419144749",
+    "start_time": "2026-04-19T14:47:49.223045",
     "total_vehicles": 10,
     "max_workers": 6,
-    "end_time": "2026-04-19T02:27:40.342461",
-    "execution_time_seconds": 0.07
+    "end_time": "2026-04-19T14:47:49.280258",
+    "execution_time_seconds": 0.06
   },
   "vehicles": [
     {
       "vehicle_id": "VEH_DEL_00002",
       "status": "success",
-      "alert_level": "green",
-      "failures": [],
-      "appointment": null,
-      "feedback": null,
-      "customer_response": null
-    },
-    {
-      "vehicle_id": "VEH_DEL_00005",
-      "status": "success",
-      "alert_level": "green",
+      "alert_level": "red",
       "failures": [
         {
-          "vehicle_id": "VEH_DEL_00005",
-          "component": "Tires",
-          "failure_probability": 0.58,
-          "estimated_days": 30,
-          "estimated_km": 800,
+          "vehicle_id": "VEH_DEL_00002",
+          "component": "Battery",
+          "failure_probability": 0.65,
+          "estimated_days": 45,
+          "estimated_km": 1000,
           "severity": "AlertLevel.YELLOW",
-          "recommendation": "Tire rotation or replacement due",
+          "recommendation": "Battery inspection and possible replacement",
           "priority": "ServicePriority.MEDIUM"
         }
       ],
-      "appointment": null,
-      "feedback": null,
-      "customer_response": "Declined - Customer not available"
+      "appointment": {
+        "appointment_id": "APT_20260419144749_8474",
+        "vehicle_id": "VEH_DEL_00002",
+        "customer_name": "Owner_2",
+        "customer_phone": "+91-11-27311611",
+        "appointment_date": "2026-04-21",
+        "appointment_time": "15:00",
+        "service_center": "Center_Delhi_1",
+        "estimated_duration_minutes": 215,
+        "predicted_failures": [
+          "Battery"
+        ],
+        "estimated_cost": 9346,
+        "status": "confirmed",
+        "created_at": "2026-04-19T14:47:49.231260"
+      },
+      "feedback": {
+        "feedback_id": "FB_20260419144749_8040",
+        "vehicle_id": "VEH_DEL_00002",
+        "appointment_id": "APT_20260419144749_8474",
+        "satisfaction_score": 10,
+        "service_quality": 3,
+        "technician_behavior": 4,
+        "would_recommend": true,
+        "issues_resolved": true,
+        "additional_issues_found": [],
+        "feedback_date": "2026-04-19T14:47:49.237899"
+      },
+      "customer_response": "Accepted - Customer interested"
     },
     {
       "vehicle_id": "VEH_DEL_00001",
@@ -49,28 +66,10 @@
     {
       "vehicle_id": "VEH_DEL_00004",
       "status": "success",
-      "alert_level": "green",
-      "failures": [],
-      "appointment": null,
-      "feedback": null,
-      "customer_response": null
-    },
-    {
-      "vehicle_id": "VEH_DEL_00009",
-      "status": "success",
-      "alert_level": "green",
-      "failures": [],
-      "appointment": null,
-      "feedback": null,
-      "customer_response": null
-    },
-    {
-      "vehicle_id": "VEH_DEL_00003",
-      "status": "success",
-      "alert_level": "green",
+      "alert_level": "red",
       "failures": [
         {
-          "vehicle_id": "VEH_DEL_00003",
+          "vehicle_id": "VEH_DEL_00004",
           "component": "Battery",
           "failure_probability": 0.65,
           "estimated_days": 45,
@@ -78,57 +77,20 @@
           "severity": "AlertLevel.YELLOW",
           "recommendation": "Battery inspection and possible replacement",
           "priority": "ServicePriority.MEDIUM"
-        },
-        {
-          "vehicle_id": "VEH_DEL_00003",
-          "component": "Transmission Fluid",
-          "failure_probability": 0.42,
-          "estimated_days": 60,
-          "estimated_km": 1500,
-          "severity": "AlertLevel.YELLOW",
-          "recommendation": "Transmission fluid change recommended",
-          "priority": "ServicePriority.MEDIUM"
-        }
-      ],
-      "appointment": {
-        "appointment_id": "APT_20260419022740_9919",
-        "vehicle_id": "VEH_DEL_00003",
-        "customer_name": "Owner_3",
-        "customer_phone": "+91-11-57141928",
-        "appointment_date": "2026-04-22",
-        "appointment_time": "15:00",
-        "service_center": "Center_Delhi_1",
-        "estimated_duration_minutes": 180,
-        "predicted_failures": [
-          "Battery",
-          "Transmission Fluid"
-        ],
-        "estimated_cost": 11128,
-        "status": "confirmed",
-        "created_at": "2026-04-19T02:27:40.316303"
-      },
-      "feedback": null,
-      "customer_response": "Accepted - Customer interested"
-    },
-    {
-      "vehicle_id": "VEH_DEL_00010",
-      "status": "success",
-      "alert_level": "green",
-      "failures": [
-        {
-          "vehicle_id": "VEH_DEL_00010",
-          "component": "Transmission Fluid",
-          "failure_probability": 0.42,
-          "estimated_days": 60,
-          "estimated_km": 1500,
-          "severity": "AlertLevel.YELLOW",
-          "recommendation": "Transmission fluid change recommended",
-          "priority": "ServicePriority.MEDIUM"
         }
       ],
       "appointment": null,
       "feedback": null,
       "customer_response": "Declined - Customer not available"
+    },
+    {
+      "vehicle_id": "VEH_DEL_00007",
+      "status": "success",
+      "alert_level": "green",
+      "failures": [],
+      "appointment": null,
+      "feedback": null,
+      "customer_response": null
     },
     {
       "vehicle_id": "VEH_DEL_00006",
@@ -146,75 +108,60 @@
           "priority": "ServicePriority.MEDIUM"
         }
       ],
-      "appointment": {
-        "appointment_id": "APT_20260419022740_7228",
-        "vehicle_id": "VEH_DEL_00006",
-        "customer_name": "Owner_6",
-        "customer_phone": "+91-11-61642055",
-        "appointment_date": "2026-04-23",
-        "appointment_time": "16:00",
-        "service_center": "Center_Delhi_1",
-        "estimated_duration_minutes": 91,
-        "predicted_failures": [
-          "Tires"
-        ],
-        "estimated_cost": 15761,
-        "status": "confirmed",
-        "created_at": "2026-04-19T02:27:40.327632"
-      },
+      "appointment": null,
       "feedback": null,
-      "customer_response": "Accepted - Customer interested"
+      "customer_response": "Declined - Customer not available"
     },
     {
-      "vehicle_id": "VEH_DEL_00007",
+      "vehicle_id": "VEH_DEL_00003",
       "status": "success",
       "alert_level": "green",
       "failures": [
         {
-          "vehicle_id": "VEH_DEL_00007",
-          "component": "Transmission Fluid",
-          "failure_probability": 0.42,
-          "estimated_days": 60,
-          "estimated_km": 1500,
+          "vehicle_id": "VEH_DEL_00003",
+          "component": "Tires",
+          "failure_probability": 0.58,
+          "estimated_days": 30,
+          "estimated_km": 800,
           "severity": "AlertLevel.YELLOW",
-          "recommendation": "Transmission fluid change recommended",
+          "recommendation": "Tire rotation or replacement due",
           "priority": "ServicePriority.MEDIUM"
         }
       ],
       "appointment": {
-        "appointment_id": "APT_20260419022740_3804",
-        "vehicle_id": "VEH_DEL_00007",
-        "customer_name": "Owner_7",
-        "customer_phone": "+91-11-24771313",
+        "appointment_id": "APT_20260419144749_7299",
+        "vehicle_id": "VEH_DEL_00003",
+        "customer_name": "Owner_3",
+        "customer_phone": "+91-11-74879473",
         "appointment_date": "2026-04-23",
-        "appointment_time": "10:00",
+        "appointment_time": "14:00",
         "service_center": "Center_Delhi_1",
-        "estimated_duration_minutes": 210,
+        "estimated_duration_minutes": 142,
         "predicted_failures": [
-          "Transmission Fluid"
+          "Tires"
         ],
-        "estimated_cost": 2924,
+        "estimated_cost": 16128,
         "status": "confirmed",
-        "created_at": "2026-04-19T02:27:40.330516"
+        "created_at": "2026-04-19T14:47:49.237348"
       },
       "feedback": {
-        "feedback_id": "FB_20260419022740_5924",
-        "vehicle_id": "VEH_DEL_00007",
-        "appointment_id": "APT_20260419022740_3804",
-        "satisfaction_score": 7,
+        "feedback_id": "FB_20260419144749_5827",
+        "vehicle_id": "VEH_DEL_00003",
+        "appointment_id": "APT_20260419144749_7299",
+        "satisfaction_score": 8,
         "service_quality": 5,
         "technician_behavior": 3,
-        "would_recommend": false,
+        "would_recommend": true,
         "issues_resolved": true,
         "additional_issues_found": [],
-        "feedback_date": "2026-04-19T02:27:40.333586"
+        "feedback_date": "2026-04-19T14:47:49.242398"
       },
       "customer_response": "Accepted - Customer interested"
     },
     {
       "vehicle_id": "VEH_DEL_00008",
       "status": "success",
-      "alert_level": "green",
+      "alert_level": "red",
       "failures": [
         {
           "vehicle_id": "VEH_DEL_00008",
@@ -225,54 +172,208 @@
           "severity": "AlertLevel.YELLOW",
           "recommendation": "Battery inspection and possible replacement",
           "priority": "ServicePriority.MEDIUM"
+        },
+        {
+          "vehicle_id": "VEH_DEL_00008",
+          "component": "Tires",
+          "failure_probability": 0.58,
+          "estimated_days": 30,
+          "estimated_km": 800,
+          "severity": "AlertLevel.YELLOW",
+          "recommendation": "Tire rotation or replacement due",
+          "priority": "ServicePriority.MEDIUM"
+        }
+      ],
+      "appointment": null,
+      "feedback": null,
+      "customer_response": "Declined - Customer not available"
+    },
+    {
+      "vehicle_id": "VEH_DEL_00010",
+      "status": "success",
+      "alert_level": "red",
+      "failures": [
+        {
+          "vehicle_id": "VEH_DEL_00010",
+          "component": "Battery",
+          "failure_probability": 0.65,
+          "estimated_days": 45,
+          "estimated_km": 1000,
+          "severity": "AlertLevel.YELLOW",
+          "recommendation": "Battery inspection and possible replacement",
+          "priority": "ServicePriority.MEDIUM"
+        },
+        {
+          "vehicle_id": "VEH_DEL_00010",
+          "component": "Tires",
+          "failure_probability": 0.58,
+          "estimated_days": 30,
+          "estimated_km": 800,
+          "severity": "AlertLevel.YELLOW",
+          "recommendation": "Tire rotation or replacement due",
+          "priority": "ServicePriority.MEDIUM"
+        }
+      ],
+      "appointment": null,
+      "feedback": null,
+      "customer_response": "Declined - Customer not available"
+    },
+    {
+      "vehicle_id": "VEH_DEL_00005",
+      "status": "success",
+      "alert_level": "green",
+      "failures": [
+        {
+          "vehicle_id": "VEH_DEL_00005",
+          "component": "Tires",
+          "failure_probability": 0.58,
+          "estimated_days": 30,
+          "estimated_km": 800,
+          "severity": "AlertLevel.YELLOW",
+          "recommendation": "Tire rotation or replacement due",
+          "priority": "ServicePriority.MEDIUM"
         }
       ],
       "appointment": {
-        "appointment_id": "APT_20260419022740_7705",
-        "vehicle_id": "VEH_DEL_00008",
-        "customer_name": "Owner_8",
-        "customer_phone": "+91-11-67769265",
-        "appointment_date": "2026-04-22",
-        "appointment_time": "15:00",
+        "appointment_id": "APT_20260419144749_8938",
+        "vehicle_id": "VEH_DEL_00005",
+        "customer_name": "Owner_5",
+        "customer_phone": "+91-11-62971885",
+        "appointment_date": "2026-04-23",
+        "appointment_time": "10:00",
         "service_center": "Center_Delhi_1",
-        "estimated_duration_minutes": 74,
+        "estimated_duration_minutes": 60,
         "predicted_failures": [
-          "Battery"
+          "Tires"
         ],
-        "estimated_cost": 8689,
+        "estimated_cost": 16747,
         "status": "confirmed",
-        "created_at": "2026-04-19T02:27:40.331875"
+        "created_at": "2026-04-19T14:47:49.252907"
       },
       "feedback": {
-        "feedback_id": "FB_20260419022740_3069",
-        "vehicle_id": "VEH_DEL_00008",
-        "appointment_id": "APT_20260419022740_7705",
-        "satisfaction_score": 10,
+        "feedback_id": "FB_20260419144749_6697",
+        "vehicle_id": "VEH_DEL_00005",
+        "appointment_id": "APT_20260419144749_8938",
+        "satisfaction_score": 7,
         "service_quality": 4,
-        "technician_behavior": 3,
+        "technician_behavior": 5,
+        "would_recommend": false,
+        "issues_resolved": true,
+        "additional_issues_found": [
+          "brake_pads"
+        ],
+        "feedback_date": "2026-04-19T14:47:49.261385"
+      },
+      "customer_response": "Accepted - Customer interested"
+    },
+    {
+      "vehicle_id": "VEH_DEL_00009",
+      "status": "success",
+      "alert_level": "green",
+      "failures": [
+        {
+          "vehicle_id": "VEH_DEL_00009",
+          "component": "Brake Pads",
+          "failure_probability": 0.87,
+          "estimated_days": 1,
+          "estimated_km": 19062,
+          "severity": "AlertLevel.RED",
+          "recommendation": "Schedule brake service immediately",
+          "priority": "ServicePriority.CRITICAL"
+        },
+        {
+          "vehicle_id": "VEH_DEL_00009",
+          "component": "Battery",
+          "failure_probability": 0.65,
+          "estimated_days": 45,
+          "estimated_km": 1000,
+          "severity": "AlertLevel.YELLOW",
+          "recommendation": "Battery inspection and possible replacement",
+          "priority": "ServicePriority.MEDIUM"
+        }
+      ],
+      "appointment": {
+        "appointment_id": "APT_20260419144749_7296",
+        "vehicle_id": "VEH_DEL_00009",
+        "customer_name": "Owner_9",
+        "customer_phone": "+91-11-58128072",
+        "appointment_date": "2026-04-23",
+        "appointment_time": "16:00",
+        "service_center": "Center_Delhi_1",
+        "estimated_duration_minutes": 60,
+        "predicted_failures": [
+          "Brake Pads",
+          "Battery"
+        ],
+        "estimated_cost": 12855,
+        "status": "confirmed",
+        "created_at": "2026-04-19T14:47:49.262956"
+      },
+      "feedback": {
+        "feedback_id": "FB_20260419144749_7486",
+        "vehicle_id": "VEH_DEL_00009",
+        "appointment_id": "APT_20260419144749_7296",
+        "satisfaction_score": 8,
+        "service_quality": 5,
+        "technician_behavior": 5,
         "would_recommend": true,
         "issues_resolved": true,
         "additional_issues_found": [],
-        "feedback_date": "2026-04-19T02:27:40.334075"
+        "feedback_date": "2026-04-19T14:47:49.264911"
       },
       "customer_response": "Accepted - Customer interested"
     }
   ],
   "summary": {
     "total_appointments": 4,
-    "total_failures_predicted": 7,
-    "total_insights_generated": 0,
+    "total_failures_predicted": 11,
+    "total_insights_generated": 2,
     "security_anomalies_detected": 10,
-    "normal_operations": 40,
-    "vehicles_processed_per_second": 141.65
+    "normal_operations": 42,
+    "vehicles_processed_per_second": 172.42
   },
   "appointments": [],
-  "insights": [],
+  "insights": [
+    {
+      "insight_id": "RCA_20260419144749_5652",
+      "defect_pattern": "Renault Duster_Tires",
+      "frequency": 2,
+      "affected_vehicles": [
+        "VEH_DEL_00003",
+        "VEH_DEL_00008"
+      ],
+      "root_cause": "Manufacturing variance in Tires assembly/specification",
+      "corrective_action": "Implement enhanced QC check; Adjust torque/assembly specs by +/-2%; Revalidate supplier parts",
+      "affected_models": [
+        "Renault Duster"
+      ],
+      "priority": "MEDIUM",
+      "estimated_cost_saved": 30000,
+      "created_at": "2026-04-19T14:47:49.279078"
+    },
+    {
+      "insight_id": "RCA_20260419144749_2712",
+      "defect_pattern": "Honda CRV_Tires",
+      "frequency": 2,
+      "affected_vehicles": [
+        "VEH_DEL_00010",
+        "VEH_DEL_00005"
+      ],
+      "root_cause": "Manufacturing variance in Tires assembly/specification",
+      "corrective_action": "Implement enhanced QC check; Adjust torque/assembly specs by +/-2%; Revalidate supplier parts",
+      "affected_models": [
+        "Honda CRV"
+      ],
+      "priority": "MEDIUM",
+      "estimated_cost_saved": 30000,
+      "created_at": "2026-04-19T14:47:49.279701"
+    }
+  ],
   "anomalies": [
     {
       "agent_name": "CustomerEngagementAgent",
       "agent_role": "engagement",
-      "timestamp": "2026-04-19T02:27:40.303651",
+      "timestamp": "2026-04-19T14:47:49.225417",
       "action_type": "initiate_call",
       "resource_accessed": "customer_db",
       "data_sensitivity": "sensitive",
@@ -283,7 +384,7 @@
     {
       "agent_name": "CustomerEngagementAgent",
       "agent_role": "engagement",
-      "timestamp": "2026-04-19T02:27:40.304851",
+      "timestamp": "2026-04-19T14:47:49.227210",
       "action_type": "initiate_call",
       "resource_accessed": "customer_db",
       "data_sensitivity": "sensitive",
@@ -294,7 +395,7 @@
     {
       "agent_name": "CustomerEngagementAgent",
       "agent_role": "engagement",
-      "timestamp": "2026-04-19T02:27:40.306936",
+      "timestamp": "2026-04-19T14:47:49.228287",
       "action_type": "initiate_call",
       "resource_accessed": "customer_db",
       "data_sensitivity": "sensitive",
@@ -305,7 +406,7 @@
     {
       "agent_name": "CustomerEngagementAgent",
       "agent_role": "engagement",
-      "timestamp": "2026-04-19T02:27:40.310525",
+      "timestamp": "2026-04-19T14:47:49.232444",
       "action_type": "initiate_call",
       "resource_accessed": "customer_db",
       "data_sensitivity": "sensitive",
@@ -316,7 +417,7 @@
     {
       "agent_name": "CustomerEngagementAgent",
       "agent_role": "engagement",
-      "timestamp": "2026-04-19T02:27:40.311617",
+      "timestamp": "2026-04-19T14:47:49.239845",
       "action_type": "initiate_call",
       "resource_accessed": "customer_db",
       "data_sensitivity": "sensitive",
@@ -327,7 +428,7 @@
     {
       "agent_name": "CustomerEngagementAgent",
       "agent_role": "engagement",
-      "timestamp": "2026-04-19T02:27:40.313702",
+      "timestamp": "2026-04-19T14:47:49.241591",
       "action_type": "initiate_call",
       "resource_accessed": "customer_db",
       "data_sensitivity": "sensitive",
@@ -338,7 +439,7 @@
     {
       "agent_name": "CustomerEngagementAgent",
       "agent_role": "engagement",
-      "timestamp": "2026-04-19T02:27:40.318059",
+      "timestamp": "2026-04-19T14:47:49.244630",
       "action_type": "initiate_call",
       "resource_accessed": "customer_db",
       "data_sensitivity": "sensitive",
@@ -349,7 +450,7 @@
     {
       "agent_name": "CustomerEngagementAgent",
       "agent_role": "engagement",
-      "timestamp": "2026-04-19T02:27:40.321523",
+      "timestamp": "2026-04-19T14:47:49.245612",
       "action_type": "initiate_call",
       "resource_accessed": "customer_db",
       "data_sensitivity": "sensitive",
@@ -360,7 +461,7 @@
     {
       "agent_name": "CustomerEngagementAgent",
       "agent_role": "engagement",
-      "timestamp": "2026-04-19T02:27:40.323835",
+      "timestamp": "2026-04-19T14:47:49.257273",
       "action_type": "initiate_call",
       "resource_accessed": "customer_db",
       "data_sensitivity": "sensitive",
@@ -371,7 +472,7 @@
     {
       "agent_name": "CustomerEngagementAgent",
       "agent_role": "engagement",
-      "timestamp": "2026-04-19T02:27:40.324991",
+      "timestamp": "2026-04-19T14:47:49.258387",
       "action_type": "initiate_call",
       "resource_accessed": "customer_db",
       "data_sensitivity": "sensitive",
