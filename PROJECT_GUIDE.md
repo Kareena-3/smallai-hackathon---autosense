@@ -54,7 +54,7 @@ Auto/
 │   ├── feedback.py            ← Post-service satisfaction collection
 │   └── quality.py             ← RCA/CAPA manufacturing defect analysis
 │
-├── autosense_dashboard.html   ← Single-file frontend demo (no server)
+├── index.html   ← Single-file frontend demo (no server)
 ├── PROJECT_GUIDE.md           ← This guide
 ├── remixed-734d1398.md        ← Business pitch document
 └── automotive_ai_system.py    ← Original monolith (kept for reference)
@@ -430,7 +430,7 @@ def main():
 
 ---
 
-## 5. HTML Dashboard — `autosense_dashboard.html`
+## 5. HTML Dashboard — `index.html`
 
 ### Structure
 Single HTML file with embedded CSS + JS. No server, no build tools, no npm.
@@ -481,7 +481,7 @@ python main.py
 **Output:** Console logs → executive report → `maintenance_system_results.json`
 
 ### HTML Dashboard
-Double-click `autosense_dashboard.html` — opens in browser, zero setup.
+Double-click `index.html` — opens in browser, zero setup.
 
 ---
 
